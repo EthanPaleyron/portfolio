@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.hoverViolet:hover {
+  background-color: #755CDE;
+}
+
+.hoverBeige:hover {
+  background-color: #F6A560;
+}
+
+.positionFlex {
+  display: flex;
+  justify-content: center;
+}
+
+.sectionPoste {
+  display: grid;
+  justify-content: center;
+}
+
+.sectionAmy {
+  display: flex;
+  justify-content: center;
+}
+
+.boutonAmy {
+  display: flex;
+  justify-content: center;
+}
+
+.sectionBlack {
+  display: flex;
+  justify-content: center;
+}
+
+.positionBoutonRose {
+  display: flex;
+  justify-content: center;
+}
+
+
+.header {
+  margin: 10px;
+}
+
+.boutonConsultation {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: black;
+  border-radius: 35px;
+  line-height: 28px;
+  padding: 15px;
+  float: right;
+}
+
+.boutonConsultation2 {
+  color: white;
+  background-color: #EB7565;
+  border-radius: 35px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 35px;
+  line-height: 28px;
+  padding: 15px;
+}
+
+
+.titreTxt {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.descriptionTxt {
+  color: #7A746E;
+  text-align: center;
+  margin: 45px;
+}
+
+
+.stylePoste {
+  border-radius: 8px;
+  margin: 15px;
+}
+
+.txtDisine {
+  color: white;
+  font-size: 24px;
+}
+
+.Graphic {
+  background-color: #755CDE;
+  width: 343px;
+  height: 364px;
+}
+
+.imgPoste1 {
+  margin: 10% 0 0 50%;
+}
+
+.txtPoste1 {
+  margin: 75px 24px;
+}
+
+.UIUX {
+  background-color: #F6A560;
+  width: 159px;
+  height: 182px;
+}
+
+.imgPoste2 {
+  margin: 15% 0 0 45%;
+}
+
+.twoSection {
+  display: flex;
+}
+
+.Apps {
+  background-color: #F39E9E;
+  width: 159px;
+  height: 182px;
+}
+
+.txtPoste2 {
+  margin: 44px 18px;
+}
+
+.Illustrations {
+  background-color: #EB7565;
+  width: 343px;
+  height: 158px;
+}
+
+.imgPoste3 {
+  margin: 8% 0 0 50%;
+}
+
+.Photography {
+  background-color: #61C4B7;
+  width: 343px;
+  height: 158px;
+}
+
+.imgPoste4 {
+  margin: 8% 0 0 45%;
+}
+
+.MotionGraphics {
+  background-color: #552049;
+  width: 343px;
+  height: 158px;
+}
+
+.txtPoste3 {
+  margin: 20px 0 0 20px;
+}
+
+.amy {
+  margin: 40px;
+  width: 300px;
+  height: 300px;
+}
+
+.titreTxtAmy {
+  text-align: center;
+}
+
+.txtWork {
+  margin: 50px 0 20px;
+}
+
+.imgCarousel {
+  width: 270px;
+  margin: 25px 0 25px;
+}
+
+.boutonCarousels {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+  border: none;
+  padding: 25px;
+  margin: 0 10px 50px 10px;
+}
+
+.backgroundBlack {
+  background-color: #000;
+  border-radius: 10px;
+  padding: 10%;
+  width: 90%;
+  margin-bottom: 24px;
+}
+
+.titreTxtBlock {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 50px;
+}
+
+.descriptionTxtBlock {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer {
+  margin: 10px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .logo {
+    width: 75px;
+  }
+
+  .boutonConsultation {
+    padding: 20px;
+  }
+
+  .boutonConsultation2 {
+    padding: 20px;
+  }
+
+  .positionFlex {
+    display: flex;
+    justify-content: center;
+  }
+
+  .positionTabletPoste1 {
+    display: flex;
+  }
+
+  .positionTabletAmy {
+    display: flex;
+  }
+
+  .amy {
+    margin: 50px 0 25px;
+    width: 364px;
+    height: 364px;
+  }
+
+  .positionTabletBlogAmy {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .titreTxtAmy {
+    margin: 50px 0 0 42px;
+    text-align: start;
+  }
+
+  .descriptionTxt {
+    text-align: start;
+  }
+  
+  .imgCarousel {
+    width: 540px;
+    margin: 25px 0 25px;
+  }
+  
+}
+
+@media screen and (min-width: 1040px) {
+  
+  .amy {
+    margin: 50px 0 25px 75px;
+    width: 445px;
+    height: 445px;
+  }
+
+  .titreTxtAmy {
+    margin: 50px 0 0 42px;
+  }
+  
+  .titreTxtBlock {
+      text-align: start;
+    }
+  
+    .descriptionTxtBlock {
+      text-align: start;
+    }
+
+    .positionBoutonPc {
+      display: flex;  
+    }
+
+}
