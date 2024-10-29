@@ -1,11 +1,19 @@
 @use "../abstracts/" as *;
 
 h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-  background: linear-gradient(90deg, red, blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: $font-xl-d;
+  font-family: $font-nunito;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: $font-l-d;
+}
+
+h3 {
+  font-size: $font-m-d;
+}
+
+p {
+  font-size: $font-s-d;
 }

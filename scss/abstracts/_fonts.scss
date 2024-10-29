@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 // font sizing
-$font-xl: 1.75em;
-$font-l: 1.5em;
-$font-m: 1.25em;
-$font-s: 1.125em;
-$font-xs: 1em;
+$font-xl-d: 5.375rem; // 86px
+$font-l-d: 2.5rem; // 40px
+$font-m-d: 1.75rem; // 28px
+$font-s-d: 1.125rem; // 18px
+// $font-xs-d: rem; // px
 
-$font-xl-responsive: 0.5em;
-$font-l-responsive: 0.375em;
-$font-m-responsive: 0.375em;
-$font-s-responsive: 0.375em;
-$font-xs-responsive: 0.375em;
+$font-xl-m: 2.625rem; // 42px
+$font-l-m: 1.25rem; // 20px
+$font-m-m: 1rem; // 16px
+$font-s-m: 0.75rem; // 12px
+// $font-xs-m: rem; // px
 
 // font family
-$font-heading: "Montserrat", sans-serif;
-$font-body: "Mitr", sans-serif;
+$main-font: "JetBrains Mono", monospace;
+$font-nunito: "Nunito", serif;
