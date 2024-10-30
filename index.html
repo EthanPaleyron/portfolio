@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-  <title>Name Project</title>
+  <title>Ethan Paleyron</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/scss/main.scss">
@@ -10,9 +10,34 @@
 
 <body>
 
-  <h1>Hello World</h1>
+  <aside class="menu-burger">
+    <ul>
+      <li><a href="#accueil">Accueil</a>
+        <ul>
+          <li><a href="#projets">Projets</a></li>
+        </ul>
+      </li>
+      <li><a href="#a-propos">A propos</a>
+        <ul>
+          <li><a href="#fil-de-vie-pro">Fil de vie pro</a></li>
+          <li><a href="#centres-interet">Centres d'interêt</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#qualites">Qualités</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <img src="public/cube.svg" alt="Cube">
+  </aside>
 
-  <script type="module" src="/js/main.js"></script>
+  <header>
+    <nav class="nav">
+      <a href="/"><img src="public/cube.svg" alt="Icon"></a>
+      <button title="Menu Burger" id="menu-burger"></button>
+    </nav>
+  </header>
+
+  <script type="module" src="/js/menu-burger.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,86 @@
+@use "../abstracts/" as *;
+
+.nav {
+  position: fixed;
+  width: 100%;
+  padding: 3rem 4.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    width: 4rem;
+  }
+  button {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: $w;
+      transition: $main-transition;
+    }
+    &::before {
+      top: 1.2rem;
+    }
+    &::after {
+      bottom: 1.2rem;
+    }
+    &:active:not(.open) {
+      &::before {
+        transform: rotate(-5deg);
+      }
+      &::after {
+        transform: rotate(5deg);
+      }
+    }
+  }
+}
+
+.open {
+  &::before {
+    transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
+  }
+  &::after {
+    transform: rotate(45deg) translate(-0.5rem, -0.5rem);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .nav {
+    padding: 1.1rem 0.9rem;
+    a {
+      width: 2.1rem;
+    }
+    button {
+      height: 2.1rem;
+      width: 2.1rem;
+      &::before,
+      &::after {
+        height: 2px;
+      }
+      &::before {
+        top: 1.3rem;
+      }
+      &::after {
+        bottom: 1.3rem;
+      }
+    }
+  }
+  .open {
+    &::before {
+      transform: rotate(-45deg) translate(0.2rem, -0.2rem);
+    }
+    &::after {
+      transform: rotate(45deg) translate(0.2rem, 0.2rem);
+    }
+  }
+}
