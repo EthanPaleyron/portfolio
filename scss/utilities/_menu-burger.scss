@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 
 .menu-burger {
+  z-index: 100;
   overflow-y: auto;
   position: fixed;
   transform: translateY(-100vh);
@@ -16,6 +17,7 @@
   ul {
     margin-top: 9rem;
     font-size: $font-l-d;
+    line-height: $lh-l-d;
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
@@ -26,6 +28,7 @@
       margin-top: 0.5rem;
       margin-left: 4.6rem;
       font-size: $font-m-d;
+      line-height: $lh-m-d;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
@@ -53,10 +56,12 @@
     ul {
       margin-top: 0;
       font-size: clamp($font-l-m, $font-l-d, 25vw);
+      line-height: $lh-l-m;
       gap: 2.5rem;
       ul {
         margin-left: 3.6rem;
         font-size: $font-m-m;
+        line-height: $lh-m-m;
       }
     }
     img {

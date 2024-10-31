@@ -1,19 +1,70 @@
 @use "../abstracts/" as *;
+@use "sass:math";
 
-h1 {
-  font-size: $font-xl-d;
-  font-family: $font-nunito;
-  font-weight: bold;
-}
+header {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(180deg, $p 0%, $b 100%);
+  .header {
+    padding: 16.7rem 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+    &__cube {
+      position: relative;
+      // margin: 20rem 0 0 10rem;
+      transform-style: preserve-3d;
+      div {
+        $cube-size: 275px;
+        position: absolute;
+        top: -10rem;
+        left: -50rem;
+        width: $cube-size;
+        height: $cube-size;
+        background: url("../../public/cube3d_improved.png") center / cover;
+        border: 2px solid $b;
+        &:nth-child(1) {
+          // front face
+          transform: rotateY(0deg) translateZ(math.div($cube-size, 2));
+        }
+        &:nth-child(2) {
+          // back face
+          transform: rotateY(180deg) translateZ(math.div($cube-size, 2));
+        }
+        &:nth-child(3) {
+          // left face
+          transform: rotateY(-90deg) translateZ(math.div($cube-size, 2));
+        }
+        &:nth-child(4) {
+          // right face
+          transform: rotateY(90deg) translateZ(math.div($cube-size, 2));
+        }
+        &:nth-child(5) {
+          // top face
+          transform: rotateX(90deg) translateZ(math.div($cube-size, 2));
+        }
+        &:nth-child(6) {
+          // bottom face
+          transform: rotateX(-90deg) translateZ(math.div($cube-size, 2));
+        }
+      }
+    }
 
-h2 {
-  font-size: $font-l-d;
-}
-
-h3 {
-  font-size: $font-m-d;
-}
-
-p {
-  font-size: $font-s-d;
+    &__content {
+      width: 37.1rem;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        margin-bottom: 1.2rem;
+        font-size: $font-xl-d;
+        line-height: $lh-xl-d;
+        font-weight: bold;
+        font-family: $font-nunito;
+      }
+      p {
+        font-size: $font-m-d;
+      }
+    }
+  }
 }

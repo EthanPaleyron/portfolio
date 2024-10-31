@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/scss/main.scss">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 
 <body>
@@ -35,9 +36,24 @@
       <a href="/"><img src="public/cube.svg" alt="Icon"></a>
       <button title="Menu Burger" id="menu-burger"></button>
     </nav>
+    <div class="header">
+      <div class="header__cube cube">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="header__content">
+        <h1>Ethan <br> PALEYRON</h1>
+        <p>Développeur web fullstack basé près de Lyon, je suis à la recherche d'une alternance.</p>
+      </div>
+    </div>
   </header>
 
   <script type="module" src="/js/menu-burger.js"></script>
+  <script type="module" src="/js/cube3d.js"></script>
 </body>
 
 </html>
