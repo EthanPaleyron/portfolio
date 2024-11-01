@@ -57,13 +57,35 @@ header {
       flex-direction: column;
       h1 {
         margin-bottom: 1.2rem;
-        font-size: $font-xl-d;
-        line-height: $lh-xl-d;
+        @extend %text-xl;
         font-weight: bold;
         font-family: $font-nunito;
       }
       p {
-        font-size: $font-m-d;
+        @extend %text-m;
+      }
+    }
+  }
+}
+
+main {
+  #projets {
+    padding: 6.5rem 4.2rem;
+    h2 {
+      @extend %text-l;
+      margin-bottom: 5.1rem;
+    }
+    .projects {
+      display: flex;
+      div {
+        width: 50%;
+        &:first-child {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+        }
+        &:last-child {
+        }
       }
     }
   }

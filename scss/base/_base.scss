@@ -10,13 +10,6 @@ html {
   background-color: $b;
 }
 
-// default link styles
-a {
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 // default table styles
 table {
   th,
@@ -32,7 +25,7 @@ input[type="submit"],
 input[type="button"] {
   padding: 0.5rem 0.7rem;
   background-color: $g;
-  border-radius: $border-radius;
+  border-radius: $border-r-s;
 }
 
 // default champs styles
@@ -47,7 +40,7 @@ input[type="month"],
 input[type="time"],
 input[type="week"],
 textarea {
-  border-radius: $border-radius;
+  border-radius: $border-r-s;
   padding: 0.5rem;
   border: $border-xs solid $g;
 }

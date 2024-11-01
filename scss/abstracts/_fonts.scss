@@ -1,29 +1,43 @@
+@use "./variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-
-// font sizing
-$font-xl-d: 5.375rem; // 86px
-$font-l-d: 2.5rem; // 40px
-$font-m-d: 1.75rem; // 28px
-$font-s-d: 1.125rem; // 18px
-// $font-xs-d: rem; // px
-
-$font-xl-m: 2.625rem; // 42px
-$font-l-m: 1.25rem; // 20px
-$font-m-m: 1rem; // 16px
-$font-s-m: 0.75rem; // 12px
-// $font-xs-m: rem; // px
 
 // font family
 $main-font: "JetBrains Mono", monospace;
 $font-nunito: "Nunito", serif;
 
-// line-height
-$lh-xl-d: 4.8rem; // 78px
-$lh-l-d: 3.3rem; // 52.8px
-$lh-m-d: 1.7rem; // 28px
-$lh-s-d: 1.1rem; // 18px
+%text-xl {
+  font-family: $font-nunito;
+  font-size: 5.375rem; // 86px
+  line-height: 4.8rem; // 78px
+  @media screen and (max-width: $mobile) {
+    font-size: 2.625rem; // 42px
+    line-height: 2.3rem; // 38px
+  }
+}
 
-$lh-xl-m: 2.3rem; // 38px
-$lh-l-m: 1.6rem; // 26.4px
-$lh-m-m: 1rem; // 16px
-$lh-s-m: 0.7rem; // 12.5px
+%text-l {
+  font-size: 2.5rem; // 40px
+  line-height: 3.3rem; // 52.8px
+  @media screen and (max-width: $mobile) {
+    font-size: 1.25rem; // 20px
+    line-height: 1.6rem; // 26.4px
+  }
+}
+
+%text-m {
+  font-size: 1.75rem; // 28px
+  line-height: 1.7rem; // 28px
+  @media screen and (max-width: $mobile) {
+    font-size: 1rem; // 16px
+    line-height: 1rem; // 16px
+  }
+}
+
+%text-s {
+  font-size: 1.125rem; // 18px
+  line-height: 1.1rem; // 18px
+  @media screen and (max-width: $mobile) {
+    font-size: 0.75rem; // 12px
+    line-height: 0.7rem; // 12.5px
+  }
+}
