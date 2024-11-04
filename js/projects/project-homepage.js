@@ -9,9 +9,9 @@ fetch("../../json/projects.json")
         : showProject(id, project.image, project.techno, project.name)
     );
     const link = document.createElement("a");
-    link.href = "all-projects";
+    link.href = "pages/all-projects.html";
     link.classList.add("btn-gold");
-    link.textContent = "Voir plus de projets ";
+    link.textContent = "Voir plus de projets";
     const icon = document.createElement("img");
     icon.src = "public/icons/eye.svg";
     icon.alt = "œil";

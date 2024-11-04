@@ -13,41 +13,44 @@
 
   <aside class="menu-burger">
     <ul>
-      <li><a href="#accueil">Accueil</a>
+      <li><a href="/#accueil">Accueil</a>
         <ul>
-          <li><a href="#projets">Projets</a></li>
+          <li><a href="/#projets">Projets</a></li>
+          <li><a href="/pages/all-projects.html">Touts mes projets</a></li>
         </ul>
       </li>
-      <li><a href="#a-propos">A propos</a>
+      <li><a href="/#a-propos">A propos</a>
         <ul>
-          <li><a href="#fil-de-vie-pro">Fil de vie pro</a></li>
-          <li><a href="#centres-interet">Centres d'interêt</a></li>
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#qualites">Qualités</a></li>
+          <li><a href="/#fil-de-vie-pro">Fil de vie pro</a></li>
+          <li><a href="/#centres-interet">Centres d'interêt</a></li>
+          <li><a href="/#competences">Compétences</a></li>
+          <li><a href="/#qualites">Qualités</a></li>
         </ul>
       </li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="/#contact">Contact</a></li>
     </ul>
     <img src="public/cube.svg" alt="Cube">
   </aside>
 
   <header>
-    <nav class="nav">
-      <a href="/"><img src="public/cube.svg" alt="Icon"></a>
-      <button title="Menu Burger" id="menu-burger"></button>
-    </nav>
-    <div class="header">
-      <div class="header__cube cube">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="header__content">
-        <h1>Ethan <br> PALEYRON</h1>
-        <p>Développeur web fullstack basé près de Lyon, je suis à la recherche d'une alternance.</p>
+    <div id="accueil">
+      <nav class="nav">
+        <a href="/"><img src="public/cube.svg" alt="Icon"></a>
+        <button title="Menu Burger" id="menu-burger"></button>
+      </nav>
+      <div class="header">
+        <div class="header__cube cube">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="header__content">
+          <h1>Ethan <br> PALEYRON</h1>
+          <p>Développeur web fullstack basé près de Lyon, je suis à la recherche d'une alternance.</p>
+        </div>
       </div>
     </div>
   </header>
@@ -74,7 +77,7 @@
         <p><a href="https://github.com/EthanPaleyron" target="_blank">GitHub</a> / <a
             href="https://www.linkedin.com/in/ethan-paleyron-4456092b2/" target="_blank">Linkedin</a>
         </p>
-        <p>© Ethan Paleyron</p>
+        <p>&copy; Ethan Paleyron</p>
       </div>
     </div>
   </footer>
@@ -83,6 +86,7 @@
   <script type="module" src="/js/cube3d.js"></script>
   <script type="module" src="/js/projects/project-homepage.js"></script>
   <script type="module" src="/js/copy-mail.js"></script>
+  <script type="module" src="/js/main.js" defer></script>
 </body>
 
 </html>

@@ -16,7 +16,6 @@ gsap.fromTo(
     ease: "power2.out",
     onComplete: () => {
       addMouseEffect();
-      addScrollEffect();
     }, // Ajouter l'effet de souris et de scroll après l'animation d'entrée
   }
 );
@@ -32,20 +31,6 @@ function addMouseEffect() {
     // Calculer une rotation faible en fonction de la position de la souris
     mouseRotationY = (e.clientX / window.innerWidth) * 20 - 10; // De -10° à 10° en Y
     mouseRotationX = (e.clientY / window.innerHeight) * -20 + 10; // De -10° à 10° en X
-
-    // Mettre à jour la rotation du cube
-    updateCubeRotation();
-  });
-}
-
-// Fonction pour ajouter l'effet de rotation en fonction du scroll
-function addScrollEffect() {
-  window.addEventListener("scroll", () => {
-    // Calculer une rotation en fonction de la position de scroll
-    const scrollPercent =
-      window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    scrollRotationY = scrollPercent * 20 - 10; // De -10° à 10° en Y
-    scrollRotationX = scrollPercent * -20 + 10; // De -10° à 10° en X
 
     // Mettre à jour la rotation du cube
     updateCubeRotation();
