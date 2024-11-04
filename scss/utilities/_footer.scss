@@ -9,6 +9,9 @@
       @extend %text-xl;
       width: 60%;
     }
+    a:hover {
+      text-decoration: underline;
+    }
     &__spider {
       position: absolute;
       top: 50%;
