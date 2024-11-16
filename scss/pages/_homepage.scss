@@ -1,90 +1,92 @@
 @use "../abstracts/" as *;
 @use "sass:math";
 
-#accueil {
-  width: 100%;
-  height: 90vh;
-  background: linear-gradient(180deg, $p 0%, $b 100%);
-  .header {
-    padding: 16.7rem 0 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 4rem;
-    &__cube {
-      position: relative;
-      transform-style: preserve-3d;
-      div {
-        $cube-size: 17.1rem;
-        position: absolute;
-        top: -10rem;
-        left: -50rem;
-        // transform: translate(-10rem, -50rem);
-        width: $cube-size;
-        height: $cube-size;
-        background: url("../../public/cube3d_improved.png") center / cover;
-        border: 4px solid $b;
-        &:nth-child(1) {
-          // front face
-          transform: rotateY(0deg) translateZ(math.div($cube-size, 2));
-        }
-        &:nth-child(2) {
-          // back face
-          transform: rotateY(180deg) translateZ(math.div($cube-size, 2));
-        }
-        &:nth-child(3) {
-          // left face
-          transform: rotateY(-90deg) translateZ(math.div($cube-size, 2));
-        }
-        &:nth-child(4) {
-          // right face
-          transform: rotateY(90deg) translateZ(math.div($cube-size, 2));
-        }
-        &:nth-child(5) {
-          // top face
-          transform: rotateX(90deg) translateZ(math.div($cube-size, 2));
-        }
-        &:nth-child(6) {
-          // bottom face
-          transform: rotateX(-90deg) translateZ(math.div($cube-size, 2));
-        }
-      }
-    }
-
-    &__content {
-      width: 37.1rem;
+.homepage {
+  #accueil {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(180deg, $p 0%, $b 100%);
+    .header {
+      padding: 16.7rem 0 0;
       display: flex;
-      flex-direction: column;
-      h1 {
-        margin-bottom: 1.2rem;
-        @extend %text-xl;
-        font-weight: bold;
-        font-family: $font-nunito;
+      justify-content: space-around;
+      align-items: center;
+      gap: 4rem;
+      &__cube {
+        position: relative;
+        transform-style: preserve-3d;
+        div {
+          $cube-size: 17.1rem;
+          position: absolute;
+          top: -10rem;
+          left: -50rem;
+          // transform: translate(-10rem, -50rem);
+          width: $cube-size;
+          height: $cube-size;
+          background: url("../../public/cube3d_improved.png") center / cover;
+          border: 4px solid $b;
+          &:nth-child(1) {
+            // front face
+            transform: rotateY(0deg) translateZ(math.div($cube-size, 2));
+          }
+          &:nth-child(2) {
+            // back face
+            transform: rotateY(180deg) translateZ(math.div($cube-size, 2));
+          }
+          &:nth-child(3) {
+            // left face
+            transform: rotateY(-90deg) translateZ(math.div($cube-size, 2));
+          }
+          &:nth-child(4) {
+            // right face
+            transform: rotateY(90deg) translateZ(math.div($cube-size, 2));
+          }
+          &:nth-child(5) {
+            // top face
+            transform: rotateX(90deg) translateZ(math.div($cube-size, 2));
+          }
+          &:nth-child(6) {
+            // bottom face
+            transform: rotateX(-90deg) translateZ(math.div($cube-size, 2));
+          }
+        }
       }
-      p {
-        @extend %text-m;
+
+      &__content {
+        width: 37.1rem;
+        display: flex;
+        flex-direction: column;
+        h1 {
+          margin-bottom: 1.2rem;
+          @extend %text-xl;
+          font-weight: bold;
+          font-family: $font-nunito;
+        }
+        p {
+          @extend %text-m;
+        }
       }
     }
   }
-}
 
-main {
-  #projets {
-    padding: 6.5rem 4.2rem;
-    h2 {
-      @extend %text-l;
-      margin-bottom: 5.1rem;
-    }
-    .projects {
-      display: flex;
-      div {
-        width: 50%;
-        &:first-child {
-          display: flex;
-          flex-direction: column;
-          gap: 3rem;
-        }
-        &:last-child {
+  main {
+    #projets {
+      padding: 6.5rem 4.2rem;
+      h2 {
+        @extend %text-l;
+        margin-bottom: 5.1rem;
+      }
+      .projects {
+        display: flex;
+        div {
+          width: 50%;
+          &:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+          }
+          &:last-child {
+          }
         }
       }
     }

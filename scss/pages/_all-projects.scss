@@ -1,0 +1,47 @@
+@use "../abstracts/" as *;
+
+.all-project {
+  main {
+    padding: 16.3rem 4.5rem 6.5rem;
+    h1 {
+      margin-bottom: 9.5rem;
+      @extend %text-xl;
+      font-weight: bold;
+      font-family: $font-nunito;
+      text-align: center;
+    }
+    .section-projects {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        &__year {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h2 {
+            @extend %text-l;
+            font-weight: bold;
+          }
+          div {
+            display: flex;
+            gap: 1.5rem;
+            button {
+              padding: 0;
+              i {
+                font-size: 2.2rem;
+              }
+            }
+          }
+        }
+        &__projects {
+          display: flex;
+          gap: 2.6rem;
+        }
+      }
+    }
+  }
+}
