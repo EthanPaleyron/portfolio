@@ -44,6 +44,14 @@
         transform: rotate(5deg);
       }
     }
+    &:active.open {
+      &::before {
+        transform: rotate(-40deg) translate(-0.4rem, 0.4rem);
+      }
+      &::after {
+        transform: rotate(40deg) translate(-0.4rem, -0.4rem);
+      }
+    }
   }
 }
 
