@@ -1,22 +1,22 @@
-// Animation d'entrée avec les valeurs initiales de rotation et position
 gsap.fromTo(
   ".cube",
   {
-    x: -200,
-    y: 50,
+    x: -800,
+    y: -50,
     rotationX: 170,
     rotationY: 80,
   },
   {
-    x: 500,
-    y: 50,
+    x: 0,
+    y: 0,
     rotationX: -15,
     rotationY: 60,
     duration: 1.5,
     ease: "power2.out",
     onComplete: () => {
       addMouseEffect();
-    }, // Ajouter l'effet de souris et de scroll après l'animation d'entrée
+      addScrollEffect();
+    },
   }
 );
 
@@ -25,23 +25,36 @@ let mouseRotationY = 60;
 let scrollRotationX = 0;
 let scrollRotationY = 0;
 
-// Fonction pour ajouter l'effet de rotation en fonction de la position de la souris
 function addMouseEffect() {
   window.addEventListener("mousemove", (e) => {
-    // Calculer une rotation faible en fonction de la position de la souris
-    mouseRotationY = (e.clientX / window.innerWidth) * 20 - 10; // De -10° à 10° en Y
-    mouseRotationX = (e.clientY / window.innerHeight) * -20 + 10; // De -10° à 10° en X
+    const bodyWidth = document.body.scrollWidth;
+    const bodyHeight = document.body.scrollHeight;
+    const mouseX = e.pageX;
+    const mouseY = e.pageY;
 
-    // Mettre à jour la rotation du cube
+    mouseRotationY = (mouseX / bodyWidth) * 35 - 10;
+    mouseRotationX = (mouseY / bodyHeight) * -35 + 10;
     updateCubeRotation();
   });
 }
 
-// Fonction pour mettre à jour la rotation du cube en combinant la souris et le scroll
+function addScrollEffect() {
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const scrollPercent = scrollPosition / maxScroll;
+
+    scrollRotationY = scrollPercent * -120;
+    scrollRotationX = scrollPercent * -180;
+    updateCubeRotation();
+  });
+}
+
 function updateCubeRotation() {
   gsap.to(".cube", {
-    rotationX: mouseRotationX + scrollRotationX - 15, // Ajuste pour rester autour de la rotation finale
-    rotationY: mouseRotationY + scrollRotationY + 60, // Ajuste pour rester autour de la rotation finale
+    rotationX: mouseRotationX + scrollRotationX - 15,
+    rotationY: mouseRotationY + scrollRotationY + 60,
     duration: 0.3,
     ease: "power2.out",
   });

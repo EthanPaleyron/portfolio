@@ -7,53 +7,61 @@
     height: 90vh;
     background: linear-gradient(180deg, $p 0%, $b 100%);
     .header {
-      padding: 16.7rem 0 0;
+      padding: 16.7rem 4.5rem 0;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       gap: 4rem;
-      &__cube {
-        position: relative;
-        transform-style: preserve-3d;
-        div {
-          $cube-size: 17.1rem;
-          position: absolute;
-          top: -10rem;
-          left: -50rem;
-          // transform: translate(-10rem, -50rem);
-          width: $cube-size;
-          height: $cube-size;
-          background: url("../../public/cube3d_improved.png") center / cover;
-          border: 4px solid $b;
-          &:nth-child(1) {
-            // front face
-            transform: rotateY(0deg) translateZ(math.div($cube-size, 2));
-          }
-          &:nth-child(2) {
-            // back face
-            transform: rotateY(180deg) translateZ(math.div($cube-size, 2));
-          }
-          &:nth-child(3) {
-            // left face
-            transform: rotateY(-90deg) translateZ(math.div($cube-size, 2));
-          }
-          &:nth-child(4) {
-            // right face
-            transform: rotateY(90deg) translateZ(math.div($cube-size, 2));
-          }
-          &:nth-child(5) {
-            // top face
-            transform: rotateX(90deg) translateZ(math.div($cube-size, 2));
-          }
-          &:nth-child(6) {
-            // bottom face
-            transform: rotateX(-90deg) translateZ(math.div($cube-size, 2));
+      &__content-cube {
+        $cube-size: 17rem;
+        margin-left: 20vw;
+        &__cube {
+          position: relative;
+          transform-style: preserve-3d;
+          div {
+            position: absolute;
+            top: math.div(
+              -$cube-size,
+              2
+            ); // center the div in the middle of the 3d cube
+            left: math.div(
+              -$cube-size,
+              2
+            ); // center the div in the middle of the 3d cube
+            width: $cube-size;
+            height: $cube-size;
+            background: url("../../public/cube3d_improved.png") center / cover;
+            border: 4px solid $b;
+            &:nth-child(1) {
+              // front face
+              transform: rotateY(0deg) translateZ(math.div($cube-size, 2));
+            }
+            &:nth-child(2) {
+              // back face
+              transform: rotateY(180deg) translateZ(math.div($cube-size, 2));
+            }
+            &:nth-child(3) {
+              // left face
+              transform: rotateY(-90deg) translateZ(math.div($cube-size, 2));
+            }
+            &:nth-child(4) {
+              // right face
+              transform: rotateY(90deg) translateZ(math.div($cube-size, 2));
+            }
+            &:nth-child(5) {
+              // top face
+              transform: rotateX(90deg) translateZ(math.div($cube-size, 2));
+            }
+            &:nth-child(6) {
+              // bottom face
+              transform: rotateX(-90deg) translateZ(math.div($cube-size, 2));
+            }
           }
         }
       }
 
       &__content {
-        width: 37.1rem;
+        max-width: 37.1rem;
         display: flex;
         flex-direction: column;
         h1 {
@@ -71,7 +79,7 @@
 
   main {
     #projets {
-      padding: 6.5rem 4.2rem;
+      padding: 6.5rem 4.5rem;
       h2 {
         @extend %text-l;
         margin-bottom: 5.1rem;
@@ -90,5 +98,127 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .homepage {
+    #accueil {
+      .header {
+        padding: 11.7rem 2.3rem 0;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 12rem;
+        &__content-cube {
+          margin: 0;
+          $cube-size: 13rem;
+          &__cube {
+            div {
+              top: math.div(
+                -$cube-size,
+                2
+              ); // center the div in the middle of the 3d cube
+              left: math.div(
+                -$cube-size,
+                2
+              ); // center the div in the middle of the 3d cube
+              width: $cube-size;
+              height: $cube-size;
+              &:nth-child(1) {
+                // front face
+                transform: rotateY(0deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(2) {
+                // back face
+                transform: rotateY(180deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(3) {
+                // left face
+                transform: rotateY(-90deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(4) {
+                // right face
+                transform: rotateY(90deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(5) {
+                // top face
+                transform: rotateX(90deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(6) {
+                // bottom face
+                transform: rotateX(-90deg) translateZ(math.div($cube-size, 2));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // main {
+    //   #projets {
+    //   }
+    // }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .homepage {
+    #accueil {
+      .header {
+        padding: 6.7rem 2.3rem 0;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 9rem;
+        &__content-cube {
+          margin: 0;
+          $cube-size: 9rem;
+          &__cube {
+            div {
+              top: math.div(
+                -$cube-size,
+                2
+              ); // center the div in the middle of the 3d cube
+              left: math.div(
+                -$cube-size,
+                2
+              ); // center the div in the middle of the 3d cube
+              width: $cube-size;
+              height: $cube-size;
+              &:nth-child(1) {
+                // front face
+                transform: rotateY(0deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(2) {
+                // back face
+                transform: rotateY(180deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(3) {
+                // left face
+                transform: rotateY(-90deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(4) {
+                // right face
+                transform: rotateY(90deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(5) {
+                // top face
+                transform: rotateX(90deg) translateZ(math.div($cube-size, 2));
+              }
+              &:nth-child(6) {
+                // bottom face
+                transform: rotateX(-90deg) translateZ(math.div($cube-size, 2));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // main {
+    //   #projets {
+    //   }
+    // }
   }
 }
