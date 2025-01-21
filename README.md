@@ -1,25 +1,8 @@
-# Name Project
+# React + Vite
 
-<!-- ## Problems -->
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Use of [Vite](https://vitejs.dev/), [PNPM](https://pnpm.io) and [SASS](https://sass-lang.com/).
+Currently, two official plugins are available:
 
-## Install the Software
-
-- Install Vite : [NodeJS](https://nodejs.org/en).
-
-## Project Launch
-
-- Open your `Terminal`.
-
-- Install dependencies in the project:
-
-```bash
-pnpm i
-```
-
-- Run the development server:
-
-```bash
-pnpm run dev
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

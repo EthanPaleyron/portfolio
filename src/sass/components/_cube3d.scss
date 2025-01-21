@@ -1,0 +1,48 @@
+@use "../abstracts/" as *;
+@use "sass:math";
+
+$cube-size: 17rem;
+
+.cube {
+  position: relative;
+  transform-style: preserve-3d;
+  div {
+    position: absolute;
+    top: math.div(
+      -$cube-size,
+      2
+    ); // center the div in the middle of the 3d cube
+    left: math.div(
+      -$cube-size,
+      2
+    ); // center the div in the middle of the 3d cube
+    width: $cube-size;
+    height: $cube-size;
+    background: url("../../../public/img/cube3d.png") center / cover;
+    border: 4px solid $black;
+    &:nth-child(1) {
+      // front face
+      transform: rotateY(0deg) translateZ(math.div($cube-size, 2));
+    }
+    &:nth-child(2) {
+      // back face
+      transform: rotateY(180deg) translateZ(math.div($cube-size, 2));
+    }
+    &:nth-child(3) {
+      // left face
+      transform: rotateY(-90deg) translateZ(math.div($cube-size, 2));
+    }
+    &:nth-child(4) {
+      // right face
+      transform: rotateY(90deg) translateZ(math.div($cube-size, 2));
+    }
+    &:nth-child(5) {
+      // top face
+      transform: rotateX(90deg) translateZ(math.div($cube-size, 2));
+    }
+    &:nth-child(6) {
+      // bottom face
+      transform: rotateX(-90deg) translateZ(math.div($cube-size, 2));
+    }
+  }
+}

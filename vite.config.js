@@ -1,12 +1,8 @@
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
+// https://vite.dev/config/
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        main: "index.html",
-        page2: "pages/all-projects.html", // Ajoute ici les autres pages
-      },
-    },
-  },
+  plugins: [TanStackRouterVite(), react()],
 });
