@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+@use "../utilities/mixins/" as *;
 @use "../base" as *;
 
 .menu-burger {
@@ -18,6 +19,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mobile {
+      padding-top: 10rem;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
 
     a:hover {
       text-decoration: underline;
@@ -28,6 +35,9 @@
       display: flex;
       flex-direction: column;
       gap: 3.5rem;
+      @include mobile {
+        gap: 1.5rem;
+      }
 
       li {
         font-weight: bold;
@@ -47,9 +57,12 @@
       }
     }
 
-    // img {
-    // width: clamp(12rem, 19.6rem, 19.6vw);
-    // }
+    img {
+      // width: clamp(12rem, 19.6rem, 19.6vw);
+      @include mobile {
+        margin: auto;
+      }
+    }
   }
 }
 
