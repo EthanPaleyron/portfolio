@@ -1,1 +1,40 @@
-@use "abstracts" as *;
+@use "./abstracts" as *;
+@use "./base/titles" as *;
+@use "./utilities/mixins/" as *;
+
+main.homepage {
+  .header {
+    height: 90dvh;
+    background: url("../../public/img/bg-header.svg") no-repeat;
+    background-size: cover;
+    @include tablet {
+      padding-top: 9rem;
+      padding-bottom: 7rem;
+    }
+    @include mobile {
+      height: 80dvh;
+    }
+
+    &__container {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include tablet {
+        flex-direction: column-reverse;
+      }
+
+      &__content {
+        max-width: 595px;
+
+        p {
+          margin-top: 3.5rem;
+          @extend %heading-3;
+          @include mobile {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

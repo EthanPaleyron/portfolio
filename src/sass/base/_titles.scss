@@ -2,50 +2,50 @@
 @use "../abstracts" as *;
 
 %heading-1 {
-  @include ez-font($ff-nunito, 400);
+  @include ez-font($ff-nunito, 600);
   @include ez-font-size($fs-xl-d, $fs-xl-m);
-  @include ez-line-height(55px, 35px);
+  @include ez-line-height($lh-xl-d, $lh-xl-m);
   @include ez-letter-spacing(1.92px, 1.2px);
 }
 
 %heading-2 {
   @include ez-font($ff-nunito, 400);
   @include ez-font-size($fs-l-d, $fs-l-m);
-  @include ez-line-height(55px, 35px);
+  @include ez-line-height($lh-l-d, $lh-l-m);
   @include ez-letter-spacing(0.96px, 0.84px);
 }
 
 %heading-3 {
   @include ez-font($ff-main, 350);
   @include ez-font-size($fs-m-d, $fs-m-m);
-  @include ez-line-height(32px, normal);
+  @include ez-line-height($lh-m-d, $lh-m-m);
   @include ez-letter-spacing(0.44px, 0.6px);
 }
 
 %heading-4 {
   @include ez-font($ff-main, 400);
-  @include ez-font-size($fs-s-d);
-  @include ez-line-height(24px);
+  @include ez-font-size($fs-s-d, $fs-s-m);
+  @include ez-line-height($lh-s-d, $lh-s-m);
   @include ez-letter-spacing(0.6px);
 }
 
 %heading-5 {
   @include ez-font($ff-main, 600);
   @include ez-font-size($fs-s-d);
-  @include ez-line-height(28px);
+  @include ez-line-height($lh-s-d, $lh-s-m);
   @include ez-letter-spacing(0.6px);
 }
 
 %heading-6 {
   @include ez-font($ff-main, 400);
-  @include ez-font-size($fs-xs-d);
-  @include ez-line-height(21px);
+  @include ez-font-size($fs-xs-d, $fs-xs-m);
+  @include ez-line-height($lh-xs-d, $lh-xs-m);
   @include ez-letter-spacing(0.45px);
 }
 
 %paragraph {
   @include ez-font($ff-main, 300);
-  @include ez-font-size($fs-text-d);
-  @include ez-line-height(21px);
+  @include ez-font-size($fs-text-d, $fs-text-m);
+  @include ez-line-height($lh-text-d, $lh-text-m);
   @include ez-letter-spacing(0.45px);
 }

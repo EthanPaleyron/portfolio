@@ -1,48 +1,65 @@
 @use "../abstracts/" as *;
+@use "../utilities/mixins/" as *;
 @use "sass:math";
 
-$cube-size: 17rem;
+:root {
+  --cube-size: 16rem;
+}
 
-.cube {
-  position: relative;
-  transform-style: preserve-3d;
-  div {
-    position: absolute;
-    top: math.div(
-      -$cube-size,
-      2
-    ); // center the div in the middle of the 3d cube
-    left: math.div(
-      -$cube-size,
-      2
-    ); // center the div in the middle of the 3d cube
-    width: $cube-size;
-    height: $cube-size;
-    background: url("../../../public/img/cube3d.png") center / cover;
-    border: 4px solid $black;
-    &:nth-child(1) {
-      // front face
-      transform: rotateY(0deg) translateZ(math.div($cube-size, 2));
-    }
-    &:nth-child(2) {
-      // back face
-      transform: rotateY(180deg) translateZ(math.div($cube-size, 2));
-    }
-    &:nth-child(3) {
-      // left face
-      transform: rotateY(-90deg) translateZ(math.div($cube-size, 2));
-    }
-    &:nth-child(4) {
-      // right face
-      transform: rotateY(90deg) translateZ(math.div($cube-size, 2));
-    }
-    &:nth-child(5) {
-      // top face
-      transform: rotateX(90deg) translateZ(math.div($cube-size, 2));
-    }
-    &:nth-child(6) {
-      // bottom face
-      transform: rotateX(-90deg) translateZ(math.div($cube-size, 2));
+@include tablet {
+  :root {
+    --cube-size: 12rem;
+  }
+}
+
+.content-cube {
+  margin-left: calc(sqrt(var(--cube-size)));
+  perspective: 1000px;
+
+  .cube {
+    position: relative;
+    transform-style: preserve-3d;
+    height: var(--cube-size);
+    width: var(--cube-size);
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../../../public/img/cube3d.png") center / cover;
+      border: 4px solid $black;
+
+      &:nth-child(1) {
+        // Face avant
+        transform: rotateY(0deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(2) {
+        // Face arrière
+        transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(3) {
+        // Face gauche
+        transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(4) {
+        // Face droite
+        transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(5) {
+        // Face supérieure
+        transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(6) {
+        // Face inférieure
+        transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2));
+      }
     }
   }
 }

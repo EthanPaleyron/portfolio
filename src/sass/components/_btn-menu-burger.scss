@@ -1,13 +1,22 @@
 @use "../abstracts/" as *;
+@use "../utilities/mixins/" as *;
+
+:root {
+  --size: 4rem;
+  --position: 1.2rem;
+}
+
+@include mobile {
+  :root {
+    --size: 3rem;
+    --position: 0.7rem;
+  }
+}
 
 .btn-menu-burger {
   position: relative;
-  height: 4rem;
-  width: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.2rem;
+  height: var(--size);
+  width: var(--size);
 
   &::before,
   &::after {
@@ -21,11 +30,11 @@
   }
 
   &::before {
-    top: 1.2rem;
+    top: var(--position);
   }
 
   &::after {
-    bottom: 1.2rem;
+    bottom: var(--position);
   }
 
   &:active:not(.open) {
