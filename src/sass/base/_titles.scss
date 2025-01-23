@@ -9,7 +9,7 @@
 }
 
 %heading-2 {
-  @include ez-font($ff-nunito, 400);
+  @include ez-font($ff-nunito, 600);
   @include ez-font-size($fs-l-d, $fs-l-m);
   @include ez-line-height($lh-l-d, $lh-l-m);
   @include ez-letter-spacing(0.96px, 0.84px);
@@ -30,8 +30,8 @@
 }
 
 %heading-5 {
-  @include ez-font($ff-main, 600);
-  @include ez-font-size($fs-s-d);
+  @include ez-font($ff-main, 400);
+  @include ez-font-size($fs-s-d, $fs-s-m);
   @include ez-line-height($lh-s-d, $lh-s-m);
   @include ez-letter-spacing(0.6px);
 }

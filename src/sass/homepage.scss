@@ -8,10 +8,12 @@ main.homepage {
     background: url("../../public/img/bg-header.svg") no-repeat;
     background-size: cover;
     @include tablet {
+      height: 52rem;
       padding-top: 9rem;
       padding-bottom: 7rem;
     }
     @include mobile {
+      height: 32rem;
       height: 80dvh;
     }
 
@@ -33,6 +35,28 @@ main.homepage {
           @include mobile {
             margin-top: 1rem;
           }
+        }
+      }
+    }
+  }
+
+  .my-projects {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+
+    &__container {
+      margin-top: 5.1rem;
+      margin-bottom: 4.2rem;
+      display: flex;
+      justify-content: space-between;
+      &__projects {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
+      .ship-platform {
+        @include mobile {
+          display: none;
         }
       }
     }

@@ -1,0 +1,10 @@
+@use "../../abstracts" as *;
+@use "../../base/titles" as *;
+@use "../../utilities/mixins/" as *;
+
+.tag {
+  @extend %heading-5;
+  background-color: $purple;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5rem;
+}

@@ -13,8 +13,11 @@
 }
 
 .content-cube {
-  margin-left: calc(sqrt(var(--cube-size)));
+  margin-left: 3.5rem;
   perspective: 1000px;
+  @include tablet {
+    margin-left: 0;
+  }
 
   .cube {
     position: relative;

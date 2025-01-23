@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+@mixin button($bgc: $gold, $c: $white) {
+  color: $c;
+  @extend %heading-4;
+  background-color: $bgc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+}
+
+.btn {
+  &-gold {
+    @include button;
+  }
+  &-purple {
+    @include button($purple);
+  }
+}

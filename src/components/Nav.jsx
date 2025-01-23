@@ -42,8 +42,8 @@ export default function Nav() {
                     <ul>
                         <li><Link to="/">Accueil</Link>
                             <ul>
-                                <li><Link to="/projets">Projets</Link></li>
-                                <li><Link to="/pages/all-projects.html">Touts mes projets</Link></li>
+                                <li><Link to="/#projets">Mes projets</Link></li>
+                                <li><Link to="/touts-mes-projets/.html">Touts mes projets</Link></li>
                             </ul>
                         </li>
                         <li><Link to="/#a-propos">A propos</Link>

@@ -1,78 +1,59 @@
-import gsap from "gsap";
+import React, { useEffect } from "react";
+import { motion, useSpring, useMotionValue, animate } from "motion/react";
 
-gsap.fromTo(
-    ".cube",
-    {
-        x: -800,
-        y: -50,
-        rotationX: 170,
-        rotationY: 80,
-    },
-    {
-        x: 0,
-        y: 0,
-        rotationX: -15,
-        rotationY: 60,
-        duration: 1.5,
-        ease: "power2.out",
-        onComplete: () => {
-            addMouseEffect();
-            addScrollEffect();
-        },
-    }
-);
+const Cube3d = () => {
+  const rotateX = useSpring(0, { damping: 20, stiffness: 400 });
+  const rotateY = useSpring(0, { damping: 20, stiffness: 400 });
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
-let mouseRotationX = -15;
-let mouseRotationY = 60;
-let scrollRotationX = 0;
-let scrollRotationY = 0;
+  useEffect(() => {
+    animate({ x: ["-800px", "0px"] }, { duration: 0 });
+    animate({ y: ["-50px", "0px"] }, { duration: 0 });
 
-function addMouseEffect() {
-    window.addEventListener("mousemove", (e) => {
-        const bodyWidth = document.body.scrollWidth;
-        const bodyHeight = document.body.scrollHeight;
-        const mouseX = e.pageX;
-        const mouseY = e.pageY;
-
-        mouseRotationY = (mouseX / bodyWidth) * 35 - 10;
-        mouseRotationX = (mouseY / bodyHeight) * -35 + 10;
-        updateCubeRotation();
+    animate(x, 0, {
+      duration: 1.5,
+      ease: "easeOut",
     });
-}
-
-function addScrollEffect() {
-    const maxScroll = document.body.scrollHeight - window.innerHeight;
-
-    window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY;
-        const scrollPercent = scrollPosition / maxScroll;
-
-        scrollRotationY = scrollPercent * -120;
-        scrollRotationX = scrollPercent * -180;
-        updateCubeRotation();
+    animate(y, 0, {
+      duration: 1.5,
+      ease: "easeOut",
     });
-}
 
-function updateCubeRotation() {
-    gsap.to(".cube", {
-        rotationX: mouseRotationX + scrollRotationX - 15,
-        rotationY: mouseRotationY + scrollRotationY + 60,
-        duration: 0.3,
-        ease: "power2.out",
-    });
-}
+    const handleMouseMove = (e) => {
+      const mouseX = (e.clientX / window.innerWidth) * 35 - 10;
+      const mouseY = (e.clientY / window.innerHeight) * -35 + 10;
 
-export default function Cube3d() {
-    return (
-        <div className={"content-cube"}>
-            <div className={"cube"}>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    );
-}
+      rotateY.set(mouseX + 60);
+      rotateX.set(mouseY - 15);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  return (
+    <div className="content-cube">
+      <motion.div
+        className="cube"
+        style={{
+          x,
+          y,
+          rotateX,
+          rotateY,
+        }}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default Cube3d;
