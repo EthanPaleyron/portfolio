@@ -13,6 +13,7 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ProjectProjectidImport } from './routes/project/$projectid'
 
 // Create Virtual Routes
 
@@ -26,6 +27,12 @@ const IndexLazyRoute = IndexLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
 
+const ProjectProjectidRoute = ProjectProjectidImport.update({
+  id: '/project/$projectid',
+  path: '/project/$projectid',
+  getParentRoute: () => rootRoute,
+} as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -37,6 +44,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
+    '/project/$projectid': {
+      id: '/project/$projectid'
+      path: '/project/$projectid'
+      fullPath: '/project/$projectid'
+      preLoaderRoute: typeof ProjectProjectidImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -44,32 +58,37 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
+  '/project/$projectid': typeof ProjectProjectidRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
+  '/project/$projectid': typeof ProjectProjectidRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexLazyRoute
+  '/project/$projectid': typeof ProjectProjectidRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/project/$projectid'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/project/$projectid'
+  id: '__root__' | '/' | '/project/$projectid'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
+  ProjectProjectidRoute: typeof ProjectProjectidRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
+  ProjectProjectidRoute: ProjectProjectidRoute,
 }
 
 export const routeTree = rootRoute
@@ -82,11 +101,15 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.jsx",
       "children": [
-        "/"
+        "/",
+        "/project/$projectid"
       ]
     },
     "/": {
       "filePath": "index.lazy.jsx"
+    },
+    "/project/$projectid": {
+      "filePath": "project/$projectid.jsx"
     }
   }
 }

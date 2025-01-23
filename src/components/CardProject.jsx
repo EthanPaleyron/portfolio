@@ -3,16 +3,16 @@ import Tag from "./Tag";
 
 export default function CardProject({
   children = "Nom du projet",
-  Skills = ["React", "React", "React", "React"],
-  Image = "revision.jpg",
+  skills = ["skill"],
+  image = "revision.jpg",
   to = "/",
 }) {
   return (
     <article className={"card-project"}>
       <Link to={to}>
-        <img src={`../../public/img/projects/${Image}`} alt="Image du projet" />
+        <img src={`../../public/img/projects/${image}`} alt="Image du projet" />
         <ul>
-          {Skills.map((skill, index) => (
+          {skills.map((skill, index) => (
             <Tag key={index}>{skill}</Tag>
           ))}
         </ul>
