@@ -11,12 +11,6 @@
   @include tablet {
     gap: 0.7rem;
   }
-  &:hover {
-    text-decoration: underline;
-  }
-  b {
-    @extend %heading-4;
-  }
   img {
     width: 2rem;
     @include tablet {
