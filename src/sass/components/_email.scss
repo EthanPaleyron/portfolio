@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+@use "../utilities/mixins/" as *;
+@use "../base/titles" as *;
+
+.email {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  @include tablet {
+    gap: 0.7rem;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  b {
+    @extend %heading-4;
+  }
+  img {
+    width: 2rem;
+    @include tablet {
+      width: 1.5rem;
+    }
+  }
+}

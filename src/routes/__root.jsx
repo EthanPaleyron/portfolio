@@ -1,6 +1,7 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 import { ReactLenis } from "lenis/react";
 import { cancelFrame, frame } from "motion/react";
@@ -25,7 +26,8 @@ export const Route = createRootRoute({
       <ReactLenis root>
         <Nav></Nav>
         <Outlet />
-        <TanStackRouterDevtools />
+        <Footer></Footer>
+        {/* <TanStackRouterDevtools /> */}
       </ReactLenis>
     );
   },

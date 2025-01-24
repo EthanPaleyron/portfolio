@@ -1,21 +1,23 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
 
-// @mixin link(
-//   $color: $secondary,
-//   $colorHover: $primary,
-//   $td: none,
-//   $tdh: underline
-// ) {
-//   @extend %paragraph;
-//   color: $color;
-//   text-decoration: $td;
-//   &:hover {
-//     color: $colorHover;
-//     text-decoration: $tdh;
-//   }
-// }
+@mixin link($isBig: false, $tdh: underline, $td: none, $color: $white) {
+  @if ($isBig) {
+    @extend %heading-2;
+  } @else {
+    @extend %heading-3;
+  }
+  color: $color;
+  text-decoration: $td;
+  &:hover {
+    text-decoration: $tdh;
+  }
+}
 
-// .link {
-//   @include link();
-// }
+.link,
+a {
+  @include link();
+}
+.big-link {
+  @include link($isBig: true);
+}
