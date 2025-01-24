@@ -5,7 +5,7 @@
   @if ($isBig) {
     @extend %heading-2;
   } @else {
-    @extend %heading-3;
+    @extend %heading-4;
   }
   color: $color;
   text-decoration: $td;
@@ -14,8 +14,7 @@
   }
 }
 
-.link,
-a {
+.link {
   @include link();
 }
 .big-link {

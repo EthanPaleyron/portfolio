@@ -3,7 +3,7 @@
 
 @mixin button($bgc: $gold, $c: $white) {
   color: $c;
-  @extend %heading-4;
+  @extend %paragraph;
   width: fit-content;
   height: fit-content;
   background-color: $bgc;

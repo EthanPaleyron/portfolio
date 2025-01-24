@@ -3,7 +3,7 @@
 @use "../../utilities/mixins/" as *;
 
 .tag {
-  @extend %heading-6;
+  @extend %paragraph;
   width: fit-content;
   height: fit-content;
   background-color: $purple;

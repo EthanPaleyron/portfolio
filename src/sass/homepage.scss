@@ -31,7 +31,7 @@ main.homepage {
 
         p {
           margin-top: 3.5rem;
-          @extend %heading-3;
+          @extend %heading-4;
           @include mobile {
             margin-top: 1rem;
           }

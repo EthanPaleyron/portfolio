@@ -5,12 +5,12 @@
 :root {
   --vw: 1dvw;
   --computed-margin: max(
-          #{$min-margin},
-          calc((var(--vw, 1vw) * 100 - 1140px) / 2)
+    #{$min-margin},
+    calc((var(--vw, 1vw) * 100 - 1140px) / 2)
   );
   --computed-margin-1440: max(
-          #{$min-margin},
-          calc((var(--vw, 1vw) * 100 - 1440px) / 2)
+    #{$min-margin},
+    calc((var(--vw, 1vw) * 100 - 1440px) / 2)
   );
 }
 
@@ -46,14 +46,6 @@ h3 {
 
 h4 {
   @extend %heading-4;
-}
-
-h5 {
-  @extend %heading-5;
-}
-
-h6 {
-  @extend %heading-6;
 }
 
 // Texts
