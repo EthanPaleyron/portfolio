@@ -4,7 +4,7 @@ import Tag from "./Tag";
 export default function CardProject({
   children = "Nom du projet",
   skills = ["skill"],
-  image = "revision.jpg",
+  image = "cca-rillieux-vancia.png",
   to = "/",
 }) {
   return (

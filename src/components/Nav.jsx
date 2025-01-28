@@ -54,7 +54,7 @@ export default function Nav() {
                   <Link to="/#projets">Mes projets</Link>
                 </li>
                 <li>
-                  <Link to="/touts-mes-projets/.html">Touts mes projets</Link>
+                  <Link to="/projects/">Touts mes projets</Link>
                 </li>
               </ul>
             </li>

@@ -1,0 +1,16 @@
+@use "./abstracts" as *;
+@use "./base/titles" as *;
+@use "./utilities/mixins/" as *;
+
+.all-projects {
+  padding: 9.5rem 0 6.5rem;
+  h1 {
+    margin-bottom: 9.5rem;
+    text-align: center;
+  }
+  &__sections-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
