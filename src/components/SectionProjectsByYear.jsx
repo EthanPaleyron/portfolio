@@ -1,6 +1,12 @@
 import CardProject from "./CardProject.jsx";
+import { projectsList } from "../data/projectsList"; // Ajout de l'import
 
 export default function SectionProjectsByYear({ children }) {
+  // Filtrer les projets pour l'année spécifique
+  const projectsForYear = projectsList.filter(
+    (project) => project.year === parseInt(children)
+  );
+
   return (
     <section className="section-projects-by-year container">
       <div className="section-projects-by-year__top">
@@ -12,11 +18,17 @@ export default function SectionProjectsByYear({ children }) {
       </div>
       <div className="section-projects-by-year__projects">
         <div className="section-projects-by-year__projects__items">
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
+          {projectsForYear.map((project) => (
+            <CardProject
+              key={project.id}
+              project={project}
+              skills={project.skills}
+              image={project.image}
+              to={`/project/${project.id}`}
+            >
+              {project.name}
+            </CardProject>
+          ))}
         </div>
       </div>
     </section>
