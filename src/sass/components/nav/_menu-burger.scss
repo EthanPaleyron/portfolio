@@ -1,6 +1,6 @@
-@use "../abstracts/" as *;
-@use "../utilities/mixins/" as *;
-@use "../base" as *;
+@use "../../abstracts/" as *;
+@use "../../utilities/mixins/" as *;
+@use "../../base" as *;
 
 .menu-burger {
   z-index: 50;

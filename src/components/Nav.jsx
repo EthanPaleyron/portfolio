@@ -51,7 +51,7 @@ export default function Nav() {
               </Link>
               <ul>
                 <li>
-                  <Link to="/#projets">Mes projets</Link>
+                  <Link to="/#projects">Mes projets</Link>
                 </li>
                 <li>
                   <Link to="/projects/">Touts mes projets</Link>
@@ -59,21 +59,21 @@ export default function Nav() {
               </ul>
             </li>
             <li>
-              <Link to="/#a-propos" className="big-link">
+              <Link to="/#aboute-me" className="big-link">
                 A propos
               </Link>
               <ul>
                 <li>
-                  <Link to="/#fil-de-vie-pro">Fil de vie pro</Link>
+                  <Link to="/#thread-of-life">Fil de vie pro</Link>
                 </li>
                 <li>
-                  <Link to="/#centres-interet">Centres d'interêt</Link>
+                  <Link to="/#interests">Centres d'interêt</Link>
                 </li>
                 <li>
-                  <Link to="/#competences">Compétences</Link>
+                  <Link to="/#skills">Compétences</Link>
                 </li>
                 <li>
-                  <Link to="/#qualites">Qualités</Link>
+                  <Link to="/#qualities">Qualités</Link>
                 </li>
               </ul>
             </li>

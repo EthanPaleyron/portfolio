@@ -1,12 +1,13 @@
 @forward "link";
 @forward "button";
-@forward "nav";
-@forward "menu-burger";
-@forward "btn-menu-burger";
+@forward "./nav/nav";
+@forward "./nav/menu-burger";
+@forward "./nav/btn-menu-burger";
 @forward "cube3d";
-@forward "./projects/card-project";
+@forward "./projects/card";
 @forward "./projects/tag";
 @forward "./projects/section-projects-by-date";
+@forward "./thread-of-life/card";
 @forward "email";
 @forward "social-media";
 @forward "footer";

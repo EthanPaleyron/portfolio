@@ -21,7 +21,7 @@ export default function MyProjects() {
   }, []);
 
   return (
-    <article className={"my-projects__container__projects"}>
+    <div className={"my-projects__container__projects"}>
       {loader ? (
         <div>Chargement des projets...</div>
       ) : (
@@ -36,6 +36,6 @@ export default function MyProjects() {
           </CardProject>
         ))
       )}
-    </article>
+    </div>
   );
 }

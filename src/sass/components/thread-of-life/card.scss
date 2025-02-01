@@ -1,0 +1,37 @@
+@use "../../abstracts" as *;
+@use "../../base/titles" as *;
+@use "../../utilities/mixins/" as *;
+
+.card-thread-of-life {
+  color: $black;
+  background-color: $white;
+  width: 600px;
+  max-width: 600px;
+  height: 750px;
+  max-height: 750px;
+  border-radius: 0.5rem;
+  img {
+    height: 374px;
+    max-height: 374px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  &__bottom {
+    padding: 1.7rem 1.5rem;
+    div {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      p {
+        margin-top: 0.5rem;
+        min-width: fit-content;
+        @extend %date;
+      }
+    }
+    &__description {
+      overflow-y: hidden;
+      max-height: 230px;
+    }
+  }
+}

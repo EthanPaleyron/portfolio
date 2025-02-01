@@ -61,4 +61,19 @@ main.homepage {
       }
     }
   }
+
+  .aboute-me {
+    background-color: $purple;
+    &__title {
+      @extend %heading-2;
+      text-align: center;
+      padding: 6.5rem 0 4.6rem;
+    }
+    &__thread-of-life {
+      h2 {
+        @extend %heading-3;
+        padding-bottom: 4rem;
+      }
+    }
+  }
 }

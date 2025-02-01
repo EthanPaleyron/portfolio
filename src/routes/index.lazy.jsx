@@ -2,6 +2,7 @@ import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import "../sass/homepage.scss";
 import Cube3d from "../components/Cube3d";
 import MyProjects from "../components/MyProjects.jsx";
+import ThreadOfLife from "../components/ThreadOfLife.jsx";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -26,7 +27,7 @@ function Index() {
           </div>
         </div>
       </header>
-      <section id={"projets"} className={"my-projects container"}>
+      <section id={"projects"} className={"my-projects container"}>
         <h2>Mes projets</h2>
         <div className="my-projects__container">
           <MyProjects></MyProjects>
@@ -35,6 +36,16 @@ function Index() {
         <Link to={"/projects/"} className="btn-gold">
           Voir plus de projets
         </Link>
+      </section>
+      <section id="aboute-me" className="aboute-me">
+        <p className="aboute-me__title">A propos</p>
+        <section
+          id="thread-of-life"
+          className="aboute-me__thread-of-life container"
+        >
+          <h3>Mon fil de vie</h3>
+          <ThreadOfLife></ThreadOfLife>
+        </section>
       </section>
     </main>
   );
