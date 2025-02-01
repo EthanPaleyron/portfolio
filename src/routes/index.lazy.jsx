@@ -32,7 +32,7 @@ function Index() {
           <MyProjects></MyProjects>
           <div className="ship-platform">Animation de la ship platform</div>
         </div>
-        <Link to={"/touts-mes-projets/"} className="btn-gold">
+        <Link to={"/projects/"} className="btn-gold">
           Voir plus de projets
         </Link>
       </section>

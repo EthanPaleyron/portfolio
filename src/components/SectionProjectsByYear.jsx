@@ -1,8 +1,20 @@
+import { useRef } from "react";
 import CardProject from "./CardProject.jsx";
-import { projectsList } from "../data/projectsList"; // Ajout de l'import
+import { projectsList } from "../data/projectsList";
 
 export default function SectionProjectsByYear({ children }) {
-  // Filtrer les projets pour l'année spécifique
+  const carouselRef = useRef(null);
+
+  const scrollCarousel = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = 395;
+      carouselRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const projectsForYear = projectsList.filter(
     (project) => project.year === parseInt(children)
   );
@@ -12,11 +24,23 @@ export default function SectionProjectsByYear({ children }) {
       <div className="section-projects-by-year__top">
         <h2>Réalisations {children}</h2>
         <div className="section-projects-by-year__top__arrows">
-          <button className="arrow-left">&lt;</button>
-          <button className="arrow-right">&gt;</button>
+          <button
+            className="arrow-left"
+            title="Flèche de gauche"
+            onClick={() => scrollCarousel("left")}
+          >
+            &lt;
+          </button>
+          <button
+            className="arrow-right"
+            title="Flèche de droite"
+            onClick={() => scrollCarousel("right")}
+          >
+            &gt;
+          </button>
         </div>
       </div>
-      <div className="section-projects-by-year__projects">
+      <div className="section-projects-by-year__projects" ref={carouselRef}>
         <div className="section-projects-by-year__projects__items">
           {projectsForYear.map((project) => (
             <CardProject
