@@ -75,5 +75,16 @@ main.homepage {
         padding-bottom: 4rem;
       }
     }
+    &__interests {
+      background-color: $black;
+      &__content {
+        padding-top: 6.5rem;
+        padding-bottom: 6.5rem;
+        h2 {
+          @extend %heading-3;
+          padding-bottom: 4rem;
+        }
+      }
+    }
   }
 }
