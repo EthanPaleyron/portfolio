@@ -1,0 +1,22 @@
+@use "../../abstracts" as *;
+@use "../../base/titles" as *;
+@use "../../utilities/mixins/" as *;
+
+.thread-of-life {
+  position: relative;
+  height: 350dvh;
+  &__slider {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    &__content {
+      margin-left: calc(50vw - 580px);
+      display: flex;
+      align-items: center;
+      margin-right: 5rem;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import "../sass/all-projects.scss";
-import SectionProjectsByYear from "../components/SectionProjectsByYear";
+import SectionProjectsByYear from "../components/projects/SectionProjectsByYear";
 import { projectsList } from "../data/projectsList";
 
 export const Route = createLazyFileRoute("/projects")({

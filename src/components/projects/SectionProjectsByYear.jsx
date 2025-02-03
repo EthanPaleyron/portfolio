@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import CardProject from "./CardProject.jsx";
-import { projectsList } from "../data/projectsList";
+import { projectsList } from "../../data/projectsList";
 
 export default function SectionProjectsByYear({ children }) {
   const carouselRef = useRef(null);

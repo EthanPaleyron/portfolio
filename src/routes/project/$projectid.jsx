@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import Tag from "../../components/Tag";
+import Tag from "../../components/projects/Tag";
 import { projectsList } from "../../data/projectsList.js";
 import "../../sass/single-project.scss";
 

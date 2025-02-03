@@ -1,6 +1,6 @@
 import CardProject from "./CardProject.jsx";
 import { useState, useEffect } from "react";
-import { projectsList } from "../data/projectsList.js";
+import { projectsList } from "../../data/projectsList.js";
 
 export default function MyProjects() {
   const [projects, setProjects] = useState([]);

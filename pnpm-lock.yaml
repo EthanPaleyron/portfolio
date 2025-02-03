@@ -11,6 +11,9 @@ importers:
       '@tanstack/react-router':
         specifier: ^1.97.3
         version: 1.97.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion:
+        specifier: ^12.0.6
+        version: 12.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       lenis:
         specifier: ^1.1.20
         version: 1.1.20(react@18.3.1)
@@ -1126,8 +1129,8 @@ packages:
   for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
 
-  framer-motion@12.0.1:
-    resolution: {integrity: sha512-u6p0Qc4cY/AEQAtrC7qiYlXla39qnWoI4JXY7OCNBDXwJ5yRBD8HU+RhaOqqziw2m/b0BDh32f44W94+wXonMQ==}
+  framer-motion@12.0.6:
+    resolution: {integrity: sha512-LmrXbXF6Vv5WCNmb+O/zn891VPZrH7XbsZgRLBROw6kFiP+iTK49gxTv2Ur3F0Tbw6+sy9BVtSqnWfMUpH+6nA==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -2944,7 +2947,7 @@ snapshots:
     dependencies:
       is-callable: 1.2.7
 
-  framer-motion@12.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@12.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       motion-dom: 12.0.0
       motion-utils: 12.0.0
@@ -3254,7 +3257,7 @@ snapshots:
 
   motion@12.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      framer-motion: 12.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 12.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tslib: 2.8.1
     optionalDependencies:
       react: 18.3.1
