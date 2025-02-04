@@ -4,6 +4,7 @@ import Cube3d from "../components/Cube3d";
 import MyProjects from "../components/projects/MyProjects";
 import ThreadOfLife from "../components/thread-of-life/ThreadOfLife";
 import Interests from "../components/interests/Interests";
+import Skills from "../components/skills/Skills";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -48,6 +49,12 @@ function Index() {
           <div className="aboute-me__interests__content container">
             <h2>Mes centres d’interêt</h2>
             <Interests></Interests>
+          </div>
+        </section>
+        <section id="skills" className="aboute-me__skills">
+          <div className="aboute-me__skills__content container">
+            <h2>Mes compétences</h2>
+            <Skills></Skills>
           </div>
         </section>
       </section>

@@ -67,15 +67,26 @@ main.homepage {
     &__title {
       @extend %heading-2;
       text-align: center;
-      padding: 6.5rem 0 4.6rem;
+      padding-top: 6.5rem;
     }
     &__thread-of-life {
+      padding-top: 4.6rem;
       h2 {
         @extend %heading-3;
         padding-bottom: 4rem;
       }
     }
     &__interests {
+      background-color: $black;
+      &__content {
+        padding-top: 6.5rem;
+        h2 {
+          @extend %heading-3;
+          padding-bottom: 4rem;
+        }
+      }
+    }
+    &__skills {
       background-color: $black;
       &__content {
         padding-top: 6.5rem;
