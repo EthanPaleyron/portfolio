@@ -3,6 +3,7 @@
 @use "../base/titles" as *;
 
 .content-animation-frame {
+  z-index: -1;
   position: absolute;
   width: 100%;
   height: 131dvh;
