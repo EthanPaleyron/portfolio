@@ -5,6 +5,7 @@ import MyProjects from "../components/projects/MyProjects";
 import ThreadOfLife from "../components/thread-of-life/ThreadOfLife";
 import Interests from "../components/interests/Interests";
 import Skills from "../components/skills/Skills";
+import SectionQualities from "../components/SectionQualities";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -57,6 +58,12 @@ function Index() {
             <Skills></Skills>
           </div>
         </section>
+        <SectionQualities srcVideo="gameplay-gd.mp4">
+          Organisé et persévérant, je sais travailler de manière autonome tout
+          en favorisant l&apos;esprit d&apos;équipe. Dynamique et bienveillant,
+          je reste discipliné dans mes tâches tout en gardant une attitude
+          joviale.
+        </SectionQualities>
       </section>
     </main>
   );
