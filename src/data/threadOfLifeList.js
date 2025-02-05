@@ -17,16 +17,15 @@ export const threadOfLifeList = [
     description:
       "Dès la 5ᵉ, en cours de technologie, j'ai découvert l'algorithmie avec des activités comme Code Combat, où j'avais un bon niveau. Mon professeur a remarqué mon aisance et m'a encouragé à poursuivre dans cette voie. Après mon expérience en cuisine, j'ai donc choisi de m'orienter vers le développement web." +
       "Première année : Nous avons approfondi le HTML, CSS, et JavaScript avec une forte orientation front-end et algorithmique. Nous avons également abordé des outils et frameworks essentiels comme Git, Sass, et Adonis pour maîtriser les bases du workflow de développement." +
-      "Deuxième année : Plus axée back-end, nous avons étudié PHP, SQL, et des CMS comme WordPress, tout en continuant l'algorithmie. Un projet fil rouge, le...",
+      "Deuxième année : Plus axée back-end, nous avons étudié PHP, SQL, et des CMS comme WordPress, tout en continuant l'algorithmie. Un projet fil rouge, le générateur de Kahoot, a été développé tout au long de l'année. Cette période s'est conclue par une semaine d'évaluation académique et technique récapitulant toutes les compétences acquises sur les 2 ans et ses 1400 heures de codage." +
+      "En parallèle, nous avions des cours académiques (anglais, français, histoire-géo, mathématiques, enseignement humain et gestion de projet), ainsi que des séances de Communication Non Violente (CNV). Nous avons également bénéficié d'interventions variées sur des sujets enrichissants, parfois même en dehors du domaine de la programmation.",
   },
   {
     image: "cca-rillieux-vancia.png",
-    name: "Assistant développeur web et web mobile - EDEN SCHOOL",
-    firstDate: "15-09-2022",
-    lastDate: "04-07-2024",
+    name: "Développeur web et web mobile - EDEN SCHOOL",
+    firstDate: "09-09-2042",
+    lastDate: "09-09-2025",
     description:
-      "Dès la 5ᵉ, en cours de technologie, j'ai découvert l'algorithmie avec des activités comme Code Combat, où j'avais un bon niveau. Mon professeur a remarqué mon aisance et m'a encouragé à poursuivre dans cette voie. Après mon expérience en cuisine, j'ai donc choisi de m'orienter vers le développement web." +
-      "Première année : Nous avons approfondi le HTML, CSS, et JavaScript avec une forte orientation front-end et algorithmique. Nous avons également abordé des outils et frameworks essentiels comme Git, Sass, et Adonis pour maîtriser les bases du workflow de développement." +
-      "Deuxième année : Plus axée back-end, nous avons étudié PHP, SQL, et des CMS comme WordPress, tout en continuant l'algorithmie. Un projet fil rouge, le...",
+      "Lorem ipsum dolor sit amet. A dolorum eveniet sit repellat placeat eos saepe enim non beatae voluptas. Et velit ipsa non magnam voluptatem et blanditiis deleniti aut dolores sequi.",
   },
 ];
