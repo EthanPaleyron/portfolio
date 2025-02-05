@@ -1,6 +1,7 @@
 import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import "../sass/homepage.scss";
 import Cube3d from "../components/Cube3d";
+import Age from "../components/Age";
 import MyProjects from "../components/projects/MyProjects";
 import ThreadOfLife from "../components/thread-of-life/ThreadOfLife";
 import Interests from "../components/interests/Interests";
@@ -24,8 +25,10 @@ function Index() {
               Paleyron
             </h1>
             <p>
-              Développeur web fullstack basé près de Lyon, je suis à la
-              recherche d'une alternance.
+              J&apos;ai <Age birthday="29-11-2005" /> ans et je me suis lancé
+              dans l&apos;informatique en tant que développeur web fullstack
+              alternance au sein de l&apos;établissement EDEN SCHOOL, basé près
+              de Lyon.
             </p>
           </div>
         </div>
