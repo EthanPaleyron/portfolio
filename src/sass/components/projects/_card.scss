@@ -11,12 +11,21 @@
     gap: 1rem;
     img {
       max-height: 350px;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16/10;
     }
     ul {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
+    }
+    @include mobile {
+      ul {
+        order: 3;
+      }
+      h3 {
+        text-wrap: initial;
+        order: 2;
+      }
     }
   }
 }
@@ -25,8 +34,19 @@
   max-width: 352px;
   a {
     img {
-      max-height: 200px;
-      aspect-ratio: 16/9;
+      width: 352px;
+      max-width: 352px;
+      @include mobile {
+        width: 288px;
+        max-width: 288px;
+      }
+    }
+    ul {
+      order: 3;
+    }
+    h3 {
+      order: 2;
+      text-wrap: wrap;
     }
   }
 }

@@ -77,4 +77,43 @@ export const projectsList = [
     year: 2024,
     toMyProjects: true,
   },
+  {
+    id: 5,
+    name: `Link in bio`,
+    skills: [`Figma UI / UX`, `Tailwind CSS`, `Javascript`],
+    projectObjective: `Ce projet "Link in Bio" a pour but de créer une page web simple et efficace permettant de centraliser mes informations essentielles. Elle présente brièvement qui je suis, mes passions et mes réseaux sociaux. L'objectif est d'offrir une expérience fluide et accessible aux visiteurs, avec une interface optimisée pour tous les supports.`,
+    experienceGaind: `Ce projet m'a permis de renforcer mes compétences en accessibilité et en design UI/UX. J'ai travaillé sur une interface claire et intuitive, en respectant les bonnes pratiques d'ergonomie et de conception. L'exercice m'a également appris à mieux structurer mon travail sur Figma et à anticiper les besoins des utilisateurs pour améliorer leur expérience de navigation.`,
+    buttons: [
+      {
+        link: `https://ethanpaleyron.github.io/`,
+        color: `gold`,
+        content: `Site web`,
+      },
+      {
+        link: `https://github.com/EthanPaleyron/EthanPaleyron.github.io`,
+        color: `purple`,
+        content: `Code source`,
+      },
+    ],
+    image: `link-in-bio.webp`,
+    year: 2024,
+    toMyProjects: true,
+  },
+  {
+    id: 6,
+    name: `Générateur de Kahoot`,
+    skills: [`PHP`, `SASS`, `Javascript`, `SQL`, `Git`],
+    projectObjective: `Ce projet vise à offrir aux étudiants et formateurs un moyen rapide et efficace de créer des quiz Kahoot personnalisés. En saisissant un thème et des paramètres spécifiques, l'application génère automatiquement un quiz via ChatGPT, entièrement personnalisable et téléchargeable pour être exporté sur le site officiel de Kahoot. L'objectif est de simplifier la création de quiz tout en garantissant une flexibilité maximale.`,
+    experienceGaind: `Ce projet fil rouge, réalisé en équipe de quatre, m'a permis d'explorer l'ensemble du cycle de développement d'une application. Nous avons mené une étude approfondie des besoins via des questionnaires, défini les personas et les cibles, conçu l'UI/UX (wireframes et maquettes) et développé l'application en suivant la méthodologie Scrum Agile avec GitHub Projects, modélisation MCD/MLD/MPD, résolution de bugs et recette. Enfin, ce projet a été présenté devant un jury pour l'évaluation de fin d'année, consolidant mon expérience en gestion de projet et en présentation professionnelle. (Il nous reste plus qu'à corriger les derniers problèmes et à l'héberger. 🙃)`,
+    buttons: [
+      {
+        link: `#`,
+        color: `gold`,
+        content: `Site web`,
+      },
+    ],
+    image: `generateur-de-kahoot.webp`,
+    year: 2024,
+    toMyProjects: true,
+  },
 ];
