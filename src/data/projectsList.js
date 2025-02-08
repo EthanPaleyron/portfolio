@@ -35,7 +35,7 @@ export const projectsList = [
       },
     ],
     image: `extension-quick-notes.webp`,
-    year: 2024,
+    year: 2023,
     toMyProjects: true,
   },
   {
