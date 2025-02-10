@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll } from "motion/react";
 import { useState, useEffect, useRef } from "react";
 import { threadOfLifeList } from "../../data/threadOfLifeList.js";
 import CardThreadOfLife from "./CardThreadOfLife.jsx";
