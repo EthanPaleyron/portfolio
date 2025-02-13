@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { threadOfLifeList } from "../../data/threadOfLifeList.js";
 import CardThreadOfLife from "./CardThreadOfLife.jsx";
 import Line from "./Line.jsx";
+import React from "react";
 
 export default function ThreadOfLife() {
   const [threadOfLife, setThreadOfLife] = useState([]);
@@ -37,9 +38,8 @@ export default function ThreadOfLife() {
             <div>Chargement du fil de vie...</div>
           ) : (
             threadOfLife.map((card, index) => (
-              <>
+              <React.Fragment key={index}>
                 <CardThreadOfLife
-                  key={index}
                   image={card.image}
                   firstDate={card.firstDate}
                   lastDate={card.lastDate}
@@ -48,7 +48,7 @@ export default function ThreadOfLife() {
                   {card.name}
                 </CardThreadOfLife>
                 <Line />
-              </>
+              </React.Fragment>
             ))
           )}
         </motion.div>

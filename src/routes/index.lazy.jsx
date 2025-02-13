@@ -61,7 +61,7 @@ function Index() {
             <Skills></Skills>
           </div>
         </section>
-        <SectionQualities srcVideo="gameplay-gd.mp4">
+        <SectionQualities srcVideo="gameplay-gd-part.mp4">
           Organisé et persévérant, je sais travailler de manière autonome tout
           en favorisant l&apos;esprit d&apos;équipe. Dynamique et bienveillant,
           je reste discipliné dans mes tâches tout en gardant une attitude
