@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import Tag from "../../components/projects/Tag";
 import { projectsList } from "../../data/projectsList.js";
 import "../../sass/single-project.scss";
+import ProjectNotFound from "../../components/not-found/ProjectNotFound.jsx";
 
 export const Route = createFileRoute("/project/$projectid")({
   component: RouteComponent,
@@ -16,7 +17,7 @@ function RouteComponent() {
 
   // Handle case where project is not found
   if (!project) {
-    return <div>Project not found</div>;
+    return <ProjectNotFound />;
   }
   return (
     <main className="single-project container">
