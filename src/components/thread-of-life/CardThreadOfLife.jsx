@@ -7,18 +7,15 @@ export default function CardThreadOfLife({
 }) {
   return (
     <article className="card-thread-of-life">
-      <img src={`../../public/img/thread-of-life/${image}`} alt={children} />
-      <div className="card-thread-of-life__bottom">
-        <div>
-          <h3>{children}</h3>
-          <p>
-            Du {firstDate} au {lastDate}
-          </p>
-        </div>
-        <p className="card-thread-of-life__bottom__description">
-          {description}
-        </p>
+      <div className="card-thread-of-life__top">
+        <img src={`../../public/img/thread-of-life/${image}`} alt={children} />
+        <h3>{children}</h3>
       </div>
+      <p className="card-thread-of-life__description">{description}</p>
+      <p className="card-thread-of-life__dates">
+        Du <time dateTime={firstDate}>{firstDate}</time> au{" "}
+        <time dateTime={lastDate}>{lastDate}</time>
+      </p>
     </article>
   );
 }

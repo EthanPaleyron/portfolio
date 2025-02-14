@@ -1,6 +1,6 @@
 export const threadOfLifeList = [
   {
-    image: "cca-rillieux-vancia.png",
+    image: "mfr-de-balan.webp",
     name: "MFR de Balan CAP cuisine",
     firstDate: "07-09-2022",
     lastDate: "20-08-2022",
@@ -10,7 +10,7 @@ export const threadOfLifeList = [
       "Malgré une expérience enrichissante en cuisine, le développement restait dans un coin de ma tête et une petite voix m'a soufflée de revoir mon choix de raison pour tenter l'aventure dev' avec Eden School.",
   },
   {
-    image: "cca-rillieux-vancia.png",
+    image: "edenschool.webp",
     name: "Assistant développeur web et web mobile - EDEN SCHOOL",
     firstDate: "15-09-2022",
     lastDate: "04-07-2024",
@@ -21,7 +21,7 @@ export const threadOfLifeList = [
       "En parallèle, nous avions des cours académiques (anglais, français, histoire-géo, mathématiques, enseignement humain et gestion de projet), ainsi que des séances de Communication Non Violente (CNV). Nous avons également bénéficié d'interventions variées sur des sujets enrichissants, parfois même en dehors du domaine de la programmation.",
   },
   {
-    image: "cca-rillieux-vancia.png",
+    image: "lesbonstech.webp",
     name: "Développeur web et web mobile - EDEN SCHOOL",
     firstDate: "09-09-2042",
     lastDate: "09-09-2025",

@@ -23,7 +23,7 @@ export default function ThreadOfLife() {
 
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["5%", "-60%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1.3%", "-66%"]);
 
   return (
     <div ref={targetRef} className="thread-of-life">

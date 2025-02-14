@@ -18,6 +18,9 @@
       flex-wrap: wrap;
       gap: 0.5rem;
     }
+    h3 {
+      @extend %heading-4;
+    }
     @include mobile {
       ul {
         order: 3;
