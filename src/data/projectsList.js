@@ -1,6 +1,5 @@
 export const projectsList = [
   {
-    id: 1,
     name: `CCA Rillieux Vancia`,
     skills: [`PHP`, `SASS`, `Javascript`, `SQL`, `Figma`],
     projectObjective: [
@@ -24,7 +23,6 @@ export const projectsList = [
     toMyProjects: true,
   },
   {
-    id: 2,
     name: `Extension quick notes`,
     skills: [`Javascript`, `HTML`, `CSS`],
     projectObjective: [
@@ -49,10 +47,9 @@ export const projectsList = [
     ],
     image: `extension-quick-notes.webp`,
     year: 2023,
-    toMyProjects: true,
+    toMyProjects: false,
   },
   {
-    id: 3,
     name: `Générateur de Kahoot`,
     skills: [`PHP`, `SASS`, `Javascript`, `SQL`, `Git`],
     projectObjective: [
@@ -78,7 +75,6 @@ export const projectsList = [
     toMyProjects: true,
   },
   {
-    id: 4,
     name: `Link in bio`,
     skills: [`Figma UI / UX`, `Tailwind CSS`, `Javascript`],
     projectObjective: [
