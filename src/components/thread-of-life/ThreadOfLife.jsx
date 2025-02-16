@@ -23,7 +23,11 @@ export default function ThreadOfLife() {
 
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1.3%", "-66%"]);
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    window.innerWidth <= 1230 ? ["0%", "0%"] : ["1.3%", "-66%"]
+  );
 
   return (
     <div ref={targetRef} className="thread-of-life">
@@ -43,7 +47,11 @@ export default function ThreadOfLife() {
                   image={card.image}
                   firstDate={card.firstDate}
                   lastDate={card.lastDate}
-                  description={card.description}
+                  description={
+                    Array.isArray(card.description)
+                      ? card.description
+                      : [card.description]
+                  }
                 >
                   {card.name}
                 </CardThreadOfLife>

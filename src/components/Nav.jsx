@@ -13,6 +13,7 @@ export default function Nav() {
     const eventMenuBurger = () => {
       menuBurger.classList.toggle("open");
       button.classList.toggle("open");
+      document.body.classList.toggle("no-scroll");
     };
 
     button.addEventListener("click", eventMenuBurger);
@@ -20,7 +21,6 @@ export default function Nav() {
     links.forEach((link) => {
       link.addEventListener("click", eventMenuBurger);
     });
-    // Cleanup on component unmount
     return () => {
       button.removeEventListener("click", eventMenuBurger);
       links.forEach((link) => {
@@ -33,7 +33,7 @@ export default function Nav() {
     <>
       <nav className="nav container">
         <Link to="/">
-          <img src="../../public/icon.svg" alt="Icon" />
+          <img src="icon.svg" alt="Icon" />
         </Link>
         <button
           title="Menu Burger"
@@ -59,7 +59,7 @@ export default function Nav() {
               </ul>
             </li>
             <li>
-              <Link to="/#aboute-me" className="big-link">
+              <Link to="/#thread-of-life" className="big-link">
                 A propos
               </Link>
               <ul>
@@ -83,7 +83,7 @@ export default function Nav() {
               </Link>
             </li>
           </ul>
-          <img src="../../public/img/cube3d.png" alt="Cube" />
+          <img src="/assets/cube-3d.png" alt="Cube" />
         </div>
       </aside>
     </>

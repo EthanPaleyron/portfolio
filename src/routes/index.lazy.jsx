@@ -43,31 +43,30 @@ function Index() {
           Voir plus de projets
         </Link>
       </section>
-      <section id="aboute-me" className="aboute-me">
-        <p className="aboute-me__title">A propos</p>
-        <section id="thread-of-life" className="aboute-me__thread-of-life">
+      <div id="about-me" className="about-me">
+        <section id="thread-of-life" className="about-me__thread-of-life">
           <h2 className="container">Mon fil de vie</h2>
           <ThreadOfLife></ThreadOfLife>
         </section>
-        <section id="interests" className="aboute-me__interests">
-          <div className="aboute-me__interests__content container">
-            <h2>Mes centres d’interêt</h2>
+        <section id="interests" className="about-me__interests">
+          <div className="about-me__interests__content container">
+            <h2>Mes centres d&apos;interêt</h2>
             <Interests></Interests>
           </div>
         </section>
-        <section id="skills" className="aboute-me__skills">
-          <div className="aboute-me__skills__content container">
+        <section id="skills" className="about-me__skills">
+          <div className="about-me__skills__content container">
             <h2>Mes compétences</h2>
             <Skills></Skills>
           </div>
         </section>
-        <SectionQualities srcVideo="gameplay-gd-part.mp4">
+        <SectionQualities srcVideo="gameplay-gd.mp4">
           Organisé et persévérant, je sais travailler de manière autonome tout
           en favorisant l&apos;esprit d&apos;équipe. Dynamique et bienveillant,
           je reste discipliné dans mes tâches tout en gardant une attitude
           joviale.
         </SectionQualities>
-      </section>
+      </div>
     </main>
   );
 }

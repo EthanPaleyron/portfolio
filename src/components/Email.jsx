@@ -19,7 +19,7 @@ export default function Email() {
         {mail}
       </a>
       <button id="copy" onClick={handleCopy}>
-        <img src="/img/icons/copy.svg" alt="Copier" />
+        <img src="/assets/icons/copy.svg" alt="Copier" />
       </button>
     </div>
   );

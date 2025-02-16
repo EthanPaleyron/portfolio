@@ -23,7 +23,7 @@ function RouteComponent() {
     <main className="single-project container">
       <h1 className="single-project__name">{project.name}</h1>
       <img
-        src={`../../../public/img/projects/${project.image}`}
+        src={`/assets/projects/${project.image}`}
         alt="Image du projet"
         className="single-project__image"
       />
@@ -48,9 +48,17 @@ function RouteComponent() {
       </div>
       <div className="single-project__description">
         <h2>Objectif du projet</h2>
-        <p>{project.projectObjective}</p>
+        <div className="content-p">
+          {project.projectObjective.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
         <h2>Expérience obtenue</h2>
-        <p>{project.experienceGaind}</p>
+        <div className="content-p">
+          {project.experienceGaind.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
       </div>
     </main>
   );

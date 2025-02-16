@@ -1,0 +1,72 @@
+@use "../abstracts/" as *;
+@use "../utilities/mixins/" as *;
+@use "sass:math";
+
+:root {
+  --cube-size: 16rem;
+}
+@include tablet {
+  :root {
+    --cube-size: 12rem;
+  }
+}
+@include mobile {
+  :root {
+    --cube-size: 10rem;
+  }
+}
+
+.content-cube {
+  margin-left: 3.5rem;
+  perspective: 1000px;
+  @include tablet {
+    margin-left: 0;
+  }
+
+  .cube {
+    position: relative;
+    transform-style: preserve-3d;
+    height: var(--cube-size);
+    width: var(--cube-size);
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("/assets/cube-3d.png") center / cover;
+      border: 4px solid $black;
+
+      &:nth-child(1) {
+        // Face avant
+        transform: rotateY(0deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(2) {
+        // Face arrière
+        transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(3) {
+        // Face gauche
+        transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(4) {
+        // Face droite
+        transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(5) {
+        // Face supérieure
+        transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2));
+      }
+
+      &:nth-child(6) {
+        // Face inférieure
+        transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2));
+      }
+    }
+  }
+}

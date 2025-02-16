@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: column;
     @include tablet {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
     }
     &__email {
       margin-top: 3.5rem;
@@ -23,7 +23,8 @@
       @include mobile {
         flex-direction: column;
         align-items: start;
-        gap: 3.4rem;
+        margin-top: 3rem;
+        gap: 2.2rem;
       }
     }
     &__bottom {
@@ -34,7 +35,7 @@
       @include mobile {
         flex-direction: column;
         align-items: start;
-        gap: 3.4rem;
+        gap: 2.2rem;
       }
       &__copyright {
         @extend %paragraph;

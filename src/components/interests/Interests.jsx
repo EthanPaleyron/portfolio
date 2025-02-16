@@ -12,7 +12,7 @@ export default function Interests() {
         <Item image={"revision.jpg"}>Escape Game</Item>
         <Item image={"revision.jpg"}>Musique</Item>
         <Item image={"revision.jpg"}>Echecs</Item>
-        <Item image={"revision.jpg"}>Voyager</Item>
+        <Item image={"revision.jpg"}>Développement personnel</Item>
         <Item image={"revision.jpg"}>Lire</Item>
         <Item image={"revision.jpg"}>Jeux vidéo</Item>
         <Item image={"revision.jpg"}>Programmation</Item>

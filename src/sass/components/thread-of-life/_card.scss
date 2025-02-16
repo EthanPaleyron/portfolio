@@ -10,7 +10,9 @@
   padding: 1.7rem 1.5rem 2rem;
   display: flex;
   flex-direction: column;
-  // align-items: end;
+  @include resp-custom-max($responsiveThreadOfLife) {
+    width: 100%;
+  }
   &__top {
     width: 100%;
     padding-bottom: 1.5rem;
@@ -19,12 +21,20 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 1px $black;
+    @include resp-custom-max($responsiveThreadOfLife) {
+      flex-direction: column;
+      align-items: start;
+      gap: 1rem;
+    }
     img {
       width: 100%;
       max-width: 150px;
       height: 100%;
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
+      @include resp-custom-max($responsiveThreadOfLife) {
+        max-width: 90px;
+      }
     }
     h3 {
       width: 100%;
@@ -39,10 +49,5 @@
     padding-left: 0.7rem;
     border-left: solid 3px $purple;
     border-radius: 0.1rem;
-    // color: $white;
-    // background-color: $purple;
-    // font-weight: bold;
-    // padding: 0.5rem 0.7rem;
-    // border-radius: 0.2rem;
   }
 }

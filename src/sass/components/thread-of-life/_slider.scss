@@ -5,6 +5,11 @@
 .thread-of-life {
   position: relative;
   height: 300dvh;
+  @include resp-custom-max($responsiveThreadOfLife) {
+    padding: 0 35px;
+    padding-bottom: 5rem;
+    height: auto;
+  }
   &__slider {
     position: sticky;
     top: 0;
@@ -12,16 +17,22 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    @include resp-custom-max($responsiveThreadOfLife) {
+      position: static;
+      height: auto;
+      flex-direction: column;
+    }
     &__content {
       margin-left: calc(50vw - 605px);
       display: flex;
       align-items: center;
-      @include resp-custom-max(1230px) {
+      @include resp-custom-max($responsiveThreadOfLife) {
         margin-left: 0;
         margin-left: 0;
         margin-right: 0;
+        padding: 2.5rem 0;
+        height: 100%;
         flex-direction: column;
-        gap: 1rem;
       }
     }
   }

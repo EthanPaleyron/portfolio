@@ -10,7 +10,7 @@ export default function CardProject({
   return (
     <article className={"card-project"}>
       <Link to={to}>
-        <img src={`../../public/img/projects/${image}`} alt="Image du projet" />
+        <img src={`/assets/projects/${image}`} alt="Image du projet" />
         <ul>
           {skills.map((skill, index) => (
             <Tag key={index}>{skill}</Tag>

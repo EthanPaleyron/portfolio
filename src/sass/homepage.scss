@@ -5,16 +5,16 @@
 main.homepage {
   .header {
     height: 90dvh;
-    background: url("../../public/img/bg-header.svg") no-repeat;
+    background: url("../../public/assets/bg-header.svg") no-repeat;
     background-size: cover;
     @include tablet {
-      height: 52rem;
-      padding-top: 9rem;
-      padding-bottom: 7rem;
+      height: 56rem;
+      padding-top: 10rem;
+      padding-bottom: 6.5rem;
     }
     @include mobile {
-      height: 32rem;
-      height: 80dvh;
+      height: 50rem;
+      padding-top: 8rem;
     }
 
     &__container {
@@ -43,16 +43,26 @@ main.homepage {
   .my-projects {
     padding-top: 6.5rem;
     padding-bottom: 6.5rem;
-
+    @include mobile {
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
+    }
     &__container {
       margin-top: 5.1rem;
       margin-bottom: 4.2rem;
       display: flex;
       justify-content: space-between;
+      @include mobile {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
       &__projects {
         display: flex;
         flex-direction: column;
         gap: 3rem;
+        @include mobile {
+          gap: 2rem;
+        }
       }
       .ship-platform {
         @include mobile {
@@ -62,27 +72,36 @@ main.homepage {
     }
   }
 
-  .aboute-me {
+  .about-me {
     background-color: $purple;
-    &__title {
-      @extend %heading-2;
-      text-align: center;
-      padding-top: 6.5rem;
-    }
     &__thread-of-life {
-      padding-top: 4.6rem;
+      padding-top: 6.5rem;
+      @include mobile {
+        padding-top: 5.5rem;
+      }
       h2 {
         @extend %heading-3;
         padding-bottom: 4rem;
+        @include mobile {
+          padding-bottom: 3rem;
+          text-align: center;
+        }
       }
     }
     &__interests {
       background-color: $black;
       &__content {
         padding-top: 6.5rem;
+        @include mobile {
+          padding-top: 5.5rem;
+        }
         h2 {
           @extend %heading-3;
           padding-bottom: 4rem;
+          @include mobile {
+            padding-bottom: 3rem;
+            text-align: center;
+          }
         }
       }
     }
@@ -91,9 +110,17 @@ main.homepage {
       &__content {
         padding-top: 6.5rem;
         padding-bottom: 6.5rem;
+        @include mobile {
+          padding-top: 5.5rem;
+          padding-bottom: 5.5rem;
+        }
         h2 {
           @extend %heading-3;
           padding-bottom: 4rem;
+          @include mobile {
+            padding-bottom: 3rem;
+            text-align: center;
+          }
         }
       }
     }

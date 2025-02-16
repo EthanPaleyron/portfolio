@@ -4,6 +4,7 @@
 
 .social-media {
   display: flex;
+  flex-wrap: wrap;
   li {
     &:not(:last-child)::after {
       content: "/";

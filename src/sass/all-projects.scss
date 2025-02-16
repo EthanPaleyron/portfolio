@@ -3,14 +3,25 @@
 @use "./utilities/mixins/" as *;
 
 .all-projects {
-  padding: 9.5rem 0 6.5rem;
+  padding-top: 9.5rem;
+  padding-bottom: 6.5rem;
+  @include mobile {
+    padding-top: 9rem;
+    padding-bottom: 5rem;
+  }
   h1 {
-    margin-bottom: 9.5rem;
+    margin-bottom: 6rem;
     text-align: center;
+    @include mobile {
+      margin-bottom: 4rem;
+    }
   }
   &__sections-projects {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 4rem;
+    @include mobile {
+      gap: 3rem;
+    }
   }
 }

@@ -3,9 +3,9 @@ import { useRef } from "react";
 import { useLenis } from "lenis/react";
 
 export default function SectionQualities({ children, srcVideo }) {
-  const lenis = useLenis(({ scroll }) => {
-    console.log(scroll);
-  });
+  // const lenis = useLenis(({ scroll }) => {
+  //   console.log(scroll);
+  // });
 
   const videoContainerRef = useRef(null);
   const videoRef = useRef(null);
@@ -25,13 +25,13 @@ export default function SectionQualities({ children, srcVideo }) {
   return (
     <section
       id="qualities"
-      className="aboute-me__qualities"
+      className="about-me__qualities"
       ref={videoContainerRef}
     >
       <video ref={videoRef} id="video" muted preload="auto" playsInline>
-        <source src={srcVideo} type="video/mp4" />
+        <source src={`/assets/${srcVideo}`} type="video/mp4" />
       </video>
-      <div className="aboute-me__qualities__content container">
+      <div className="about-me__qualities__content container">
         <h2>Mes qualités</h2>
         <p>{children}</p>
       </div>

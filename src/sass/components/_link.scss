@@ -9,6 +9,7 @@
   }
   color: $color;
   text-decoration: $td;
+  text-underline-offset: 0.4rem;
   &:hover {
     text-decoration: $tdh;
   }

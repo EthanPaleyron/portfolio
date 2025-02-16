@@ -15,7 +15,7 @@
   }
 }
 
-.aboute-me__qualities {
+.about-me__qualities {
   position: relative;
   height: 65dvh;
   @include mobile {
@@ -55,9 +55,10 @@
     }
     h2 {
       @extend %heading-3;
-      padding-bottom: 4rem;
+      padding-bottom: 8rem;
       @include mobile {
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
+        text-align: center;
       }
     }
     p {
@@ -66,7 +67,7 @@
       text-align: center;
       max-width: 1000px;
       @include mobile {
-        text-align: justify;
+        text-align: start;
       }
     }
   }
