@@ -11,7 +11,7 @@ export default function Item({ children, image }) {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Vérifier immédiatement au montage
+    handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);

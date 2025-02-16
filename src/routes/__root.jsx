@@ -1,17 +1,32 @@
-import { createRootRoute, Outlet } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+import {
+  createRootRoute,
+  Outlet,
+  useRouterState,
+} from "@tanstack/react-router";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import LoadingScreen from "../components/LoadingScreen";
 import { ReactLenis } from "lenis/react";
+import { useEffect, useState } from "react";
 
 export const Route = createRootRoute({
   component: () => {
+    const routerState = useRouterState();
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+      if (routerState.status === "pending") {
+        setIsLoading(true);
+      } else {
+        setTimeout(() => setIsLoading(false), 300);
+      }
+    }, [routerState.status]);
+
     return (
-      <ReactLenis root options={{ lerp: 0.1, smooth: true }}>
+      <ReactLenis root>
         <Nav />
-        <Outlet />
+        {isLoading ? <LoadingScreen /> : <Outlet />}
         <Footer />
-        {/* <TanStackRouterDevtools /> */}
       </ReactLenis>
     );
   },

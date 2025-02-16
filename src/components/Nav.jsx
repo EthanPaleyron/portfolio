@@ -33,7 +33,7 @@ export default function Nav() {
     <>
       <nav className="nav container">
         <Link to="/">
-          <img src="icon.svg" alt="Icon" />
+          <img src="/icon.svg" alt="Icon" />
         </Link>
         <button
           title="Menu Burger"
