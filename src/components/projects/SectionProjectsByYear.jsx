@@ -42,13 +42,13 @@ export default function SectionProjectsByYear({ children }) {
       </div>
       <div className="section-projects-by-year__projects" ref={carouselRef}>
         <div className="section-projects-by-year__projects__items">
-          {projectsForYear.map((project) => (
+          {projectsForYear.map((project, index) => (
             <CardProject
-              key={project.id}
+              key={index}
               project={project}
               skills={project.skills}
               image={project.image}
-              to={`/project/${project.id}`}
+              to={`${project.name}`}
             >
               {project.name}
             </CardProject>

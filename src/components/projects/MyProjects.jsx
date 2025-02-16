@@ -25,12 +25,12 @@ export default function MyProjects() {
       {loader ? (
         <div>Chargement des projets...</div>
       ) : (
-        projects.map((project) => (
+        projects.map((project, index) => (
           <CardProject
-            key={project.id}
+            key={index}
             skills={project.skills}
             image={project.image}
-            to={`/project/${project.id}`}
+            to={project.name}
           >
             {project.name}
           </CardProject>

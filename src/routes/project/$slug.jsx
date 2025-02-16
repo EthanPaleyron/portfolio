@@ -4,16 +4,24 @@ import { projectsList } from "../../data/projectsList.js";
 import "../../sass/single-project.scss";
 import ProjectNotFound from "../../components/not-found/ProjectNotFound.jsx";
 
-export const Route = createFileRoute("/project/$projectid")({
+export const Route = createFileRoute("/project/$slug")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
+  const toSlug = (name) =>
+    name
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "");
+
   // Get the project ID from the route params
-  const { projectid } = Route.useParams();
+  const { slug } = Route.useParams();
 
   // Find the project that matches the ID (convert to number as IDs are typically numeric)
-  const project = projectsList.find((p) => p.id === Number(projectid));
+  const project = projectsList.find((p) => toSlug(p.name) === slug);
 
   // Handle case where project is not found
   if (!project) {
