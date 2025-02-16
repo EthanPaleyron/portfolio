@@ -2,23 +2,19 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Item({ children, image }) {
   const itemRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 768px)").matches
-  );
   const observerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-    const handleResize = (e) => {
-      setIsMobile(e.matches);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    mediaQuery.addEventListener("change", handleResize);
-    setIsMobile(mediaQuery.matches);
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Vérifier immédiatement au montage
 
     return () => {
-      mediaQuery.removeEventListener("change", handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

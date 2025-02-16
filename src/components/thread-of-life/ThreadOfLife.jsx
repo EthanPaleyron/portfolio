@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll } from "motion/react";
+import { motion, useTransform, useScroll, useSpring } from "motion/react";
 import { useState, useEffect, useRef } from "react";
 import { threadOfLifeList } from "../../data/threadOfLifeList.js";
 import CardThreadOfLife from "./CardThreadOfLife.jsx";
@@ -10,6 +10,7 @@ export default function ThreadOfLife() {
   const [loader, setLoader] = useState(true);
   const targetRef = useRef(null);
   const contentRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   async function fetchData() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -21,12 +22,23 @@ export default function ThreadOfLife() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const { scrollYProgress } = useScroll({ target: targetRef });
 
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    window.innerWidth <= 1230 ? ["0%", "0%"] : ["1.3%", "-66%"]
+    windowWidth <= 1230 ? ["0%", "0%"] : ["1.3%", "-66%"]
   );
 
   return (
