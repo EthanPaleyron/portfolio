@@ -42,8 +42,26 @@
       @extend %heading-4;
     }
   }
+  &__description {
+    @include mobile {
+      &.collapsed {
+        max-height: 250px;
+        overflow: hidden;
+      }
+    }
+  }
+  &__toggle {
+    display: none;
+    @extend %paragraph;
+    color: $black;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+    @include mobile {
+      display: block;
+    }
+  }
   &__dates {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     min-width: fit-content;
     @extend %date;
     padding-left: 0.7rem;

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function CardThreadOfLife({
   image,
   children,
@@ -5,9 +7,15 @@ export default function CardThreadOfLife({
   lastDate,
   description,
 }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const formatDate = (dateString) => {
     const [year, month, day] = dateString.split("-");
     return `${day}/${month}/${year}`;
+  };
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
   };
 
   return (
@@ -16,11 +24,16 @@ export default function CardThreadOfLife({
         <img src={`/assets/thread-of-life/${image}`} alt={children} />
         <h3>{children}</h3>
       </div>
-      <div className="card-thread-of-life__description content-p">
+      <div
+        className={`card-thread-of-life__description content-p ${isExpanded ? "" : "collapsed"}`}
+      >
         {description.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
       </div>
+      <button onClick={toggleExpand} className="card-thread-of-life__toggle">
+        {isExpanded ? "Voir moins" : "Voir plus"}
+      </button>
       <p className="card-thread-of-life__dates">
         Du <time dateTime={firstDate}>{formatDate(firstDate)}</time> au{" "}
         <time dateTime={lastDate}>{formatDate(lastDate)}</time>
