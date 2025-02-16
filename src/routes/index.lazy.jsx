@@ -25,7 +25,7 @@ function Index() {
               Paleyron
             </h1>
             <p>
-              J&apos;ai <Age birthday="29-11-2005" /> ans et je me suis lancé
+              J&apos;ai <Age birthday={`2005-11-29`} /> ans et je me suis lancé
               dans l&apos;informatique en tant que développeur web fullstack
               alternance au sein de l&apos;établissement EDEN SCHOOL, basé près
               de Lyon.
