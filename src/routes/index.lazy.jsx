@@ -55,8 +55,8 @@ function Index() {
           </div>
         </section>
         <section id="skills" className="about-me__skills">
-          <div className="about-me__skills__content container">
-            <h2>Mes compétences</h2>
+          <div className="about-me__skills__content">
+            <h2 className="container">Mes compétences</h2>
             <Skills></Skills>
           </div>
         </section>

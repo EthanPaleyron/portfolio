@@ -1,0 +1,25 @@
+@use "../../abstracts/" as *;
+@use "../../utilities/mixins/" as *;
+@use "../../base/titles" as *;
+
+.about-me__skills__content__containers-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  &__container {
+    h3 {
+      width: 100%;
+      @extend %heading-4;
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: solid 1px $white;
+    }
+    &__carousel {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.7rem;
+    }
+  }
+}

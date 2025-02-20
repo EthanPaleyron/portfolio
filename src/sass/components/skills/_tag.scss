@@ -1,0 +1,22 @@
+@use "../../abstracts/" as *;
+@use "../../utilities/mixins/" as *;
+@use "../../base/titles" as *;
+
+.about-me__skills__content__containers-skills__container__carousel__tag {
+  background-color: $white;
+  color: $black;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  p {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
