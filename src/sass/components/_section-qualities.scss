@@ -17,9 +17,9 @@
 
 .about-me__qualities {
   position: relative;
-  height: 65dvh;
+  height: 45rem;
   @include mobile {
-    height: 45dvh;
+    height: 25rem;
   }
   video {
     z-index: 0;
