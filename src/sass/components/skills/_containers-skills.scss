@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
   gap: 4.5rem;
+  @include mobile {
+    gap: 2.5rem;
+  }
   &__container {
     h3 {
       width: 100%;
@@ -13,13 +16,22 @@
       text-align: center;
       padding-bottom: 1rem;
       border-bottom: solid 1px $white;
+      @include mobile {
+        text-align: start;
+        padding-left: 0.8rem;
+        padding-bottom: 0.8rem;
+      }
     }
     &__carousel {
-      margin-top: 2rem;
+      margin-top: 1.7rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 1.7rem;
+      @include mobile {
+        margin-top: 1.2rem;
+        gap: 1.2rem;
+      }
     }
   }
 }
