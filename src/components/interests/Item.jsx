@@ -11,34 +11,38 @@ export default function Item({ children, image }) {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
-    if (!isMobile) return;
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+    }
 
-    observerRef.current = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        } else {
-          entry.target.classList.remove("visible");
-        }
-      },
-      { threshold: 0.89 }
-    );
+    if (isMobile) {
+      observerRef.current = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        },
+        { threshold: 0.89 }
+      );
 
-    if (itemRef.current) {
-      observerRef.current.observe(itemRef.current);
+      if (itemRef.current) {
+        observerRef.current.observe(itemRef.current);
+      }
+    } else {
+      if (itemRef.current) {
+        itemRef.current.classList.remove("visible");
+      }
     }
 
     return () => {
-      if (observerRef.current && itemRef.current) {
-        observerRef.current.unobserve(itemRef.current);
+      if (observerRef.current) {
+        observerRef.current.disconnect();
       }
     };
   }, [isMobile]);

@@ -12,12 +12,12 @@ export default function Skill({ children, source, icon }) {
     <a
       href={source}
       target="_blank"
-      className="about-me__skills__content__containers-skills__container__carousel__tag"
+      className="about-me__skills__content__containers-skills__container__skills__tag"
     >
       {content}
     </a>
   ) : (
-    <span className="about-me__skills__content__containers-skills__container__carousel__tag">
+    <span className="about-me__skills__content__containers-skills__container__skills__tag">
       {content}
     </span>
   );

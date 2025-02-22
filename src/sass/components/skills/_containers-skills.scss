@@ -22,7 +22,7 @@
         padding-bottom: 0.8rem;
       }
     }
-    &__carousel {
+    &__skills {
       margin-top: 1.7rem;
       display: flex;
       justify-content: center;
@@ -30,7 +30,8 @@
       gap: 1.7rem;
       @include mobile {
         margin-top: 1.2rem;
-        gap: 1.2rem;
+        justify-content: start;
+        gap: 1rem;
       }
     }
   }
