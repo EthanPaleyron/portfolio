@@ -3,7 +3,7 @@ export const projectsList = [
     name: `CCA Rillieux Vancia`,
     skills: [`PHP`, `SASS`, `Javascript`, `SQL`, `Figma`],
     projectObjective: [
-      `Ce site web a été conçu pour le club de canine pour ma mère.`,
+      `Ce site web a été conçu pour le club d'éducation canine de Rillieux-la-Pape.`,
       `L'objectif était de créer une plateforme intuitive et accessible, permettant aux utilisateurs de trouver facilement les informations essentielles sur le club.`,
     ],
     experienceGaind: [
