@@ -20,6 +20,14 @@
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
+      a {
+        @extend %footer;
+        text-align: center;
+        min-width: 333px;
+        @include mobile {
+          min-width: 214px;
+        }
+      }
       @include mobile {
         flex-direction: column;
         align-items: start;
@@ -42,4 +50,8 @@
       }
     }
   }
+}
+
+.copy-email {
+  text-decoration: underline;
 }

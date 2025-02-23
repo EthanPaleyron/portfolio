@@ -7,12 +7,15 @@ export default function MyProjects() {
   const [loader, setLoader] = useState(true);
 
   async function fetchData() {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    // Filter projects where toMyProjects is true
+    await new Promise((resolve) => setTimeout(resolve, 0));
     const filteredProjects = projectsList.filter(
-      (project) => project.toMyProjects
+      (project) => project.toMyProjects !== null
     );
-    setProjects(filteredProjects);
+
+    const sortedProjects = filteredProjects.sort(
+      (a, b) => a.toMyProjects - b.toMyProjects
+    );
+    setProjects(sortedProjects);
     setLoader(false);
   }
 

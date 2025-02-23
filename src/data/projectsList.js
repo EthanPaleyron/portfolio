@@ -20,7 +20,7 @@ export const projectsList = [
     ],
     image: `cca-rillieux-vancia.webp`,
     year: 2024,
-    toMyProjects: true,
+    toMyProjects: 3,
   },
   {
     name: `Extension quick notes`,
@@ -47,7 +47,7 @@ export const projectsList = [
     ],
     image: `extension-quick-notes.webp`,
     year: 2023,
-    toMyProjects: false,
+    toMyProjects: null,
   },
   {
     name: `Générateur de Kahoot`,
@@ -72,7 +72,7 @@ export const projectsList = [
     ],
     image: `generateur-de-kahoot.webp`,
     year: 2024,
-    toMyProjects: true,
+    toMyProjects: 2,
   },
   {
     name: `Link in bio`,
@@ -101,6 +101,6 @@ export const projectsList = [
     ],
     image: `link-in-bio.webp`,
     year: 2024,
-    toMyProjects: true,
+    toMyProjects: 1,
   },
 ];

@@ -1,12 +1,17 @@
+import { useState } from "react";
+
 export default function Email() {
   const mail = "ethan.paleyron@proton.me";
+  const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard
       .writeText(mail)
       .then(() => {
-        // Optional: Add a visual feedback like a toast or temporary highlight
-        console.log("Email copied to clipboard");
+        setCopied(true);
+        setTimeout(() => {
+          setCopied(false);
+        }, 1500);
       })
       .catch((err) => {
         console.error("Failed to copy email", err);
@@ -15,8 +20,11 @@ export default function Email() {
 
   return (
     <div className="email">
-      <a href={`mailto:${mail}`} className="link">
-        {mail}
+      <a
+        href={`mailto:${mail}`}
+        className={`link ${copied ? "copy-email" : ""}`}
+      >
+        {copied ? "Email copié !" : mail}
       </a>
       <button id="copy" onClick={handleCopy}>
         <img src="/assets/icons/copy.svg" alt="Copier" />

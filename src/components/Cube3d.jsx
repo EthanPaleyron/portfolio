@@ -6,7 +6,7 @@ export default function Cube3d() {
   const rotateY = useSpring(0, { damping: 50, stiffness: 1000 });
   const rotateZ = useMotionValue(0);
   const x = useMotionValue(-800);
-  const y = useMotionValue(-200);
+  const y = useMotionValue(-500);
 
   useEffect(() => {
     animate(x, 0, {
@@ -14,11 +14,11 @@ export default function Cube3d() {
       ease: "easeOut",
     });
     animate(y, 0, {
-      duration: 1.25,
+      duration: 1.15,
       ease: "easeOut",
     });
 
-    animate(rotateZ, 190, {
+    animate(rotateZ, 2 * 90 + 10, {
       duration: 1.25,
       ease: "easeOut",
     });

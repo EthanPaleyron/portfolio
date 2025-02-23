@@ -13,7 +13,7 @@ export default function ThreadOfLife() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   async function fetchData() {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 0));
     setThreadOfLife(threadOfLifeList);
     setLoader(false);
   }
