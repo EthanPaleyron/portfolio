@@ -29,14 +29,14 @@ export default function SectionProjectsByYear({ children }) {
             title="Flèche de gauche"
             onClick={() => scrollCarousel("left")}
           >
-            &lt;
+            <img src="/assets/icons/arrow-left.svg" alt="Flèche de gauche" />
           </button>
           <button
             className="arrow-right"
             title="Flèche de droite"
             onClick={() => scrollCarousel("right")}
           >
-            &gt;
+            <img src="/assets/icons/arrow-right.svg" alt="Flèche de droite" />
           </button>
         </div>
       </div>
