@@ -4,7 +4,7 @@ export default function Skill({ children, source, icon }) {
   const content = (
     <>
       {icon && <img src={icon} alt={`Logo ${children}`} title={children} />}
-      <p>{children}</p>
+      <span>{children}</span>
     </>
   );
 
@@ -17,8 +17,8 @@ export default function Skill({ children, source, icon }) {
       {content}
     </a>
   ) : (
-    <span className="about-me__skills__content__containers-skills__container__skills__tag">
+    <p className="about-me__skills__content__containers-skills__container__skills__tag">
       {content}
-    </span>
+    </p>
   );
 }

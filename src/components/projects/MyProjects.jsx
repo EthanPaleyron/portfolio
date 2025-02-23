@@ -24,7 +24,7 @@ export default function MyProjects() {
   }, []);
 
   return (
-    <div className={"my-projects__container__projects"}>
+    <div aria-live="polite" className={"my-projects__container__projects"}>
       {loader ? (
         <div>Chargement des projets...</div>
       ) : (

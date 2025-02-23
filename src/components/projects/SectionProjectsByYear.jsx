@@ -41,7 +41,10 @@ export default function SectionProjectsByYear({ children }) {
         </div>
       </div>
       <div className="section-projects-by-year__projects" ref={carouselRef}>
-        <div className="section-projects-by-year__projects__items">
+        <div
+          aria-live="polite"
+          className="section-projects-by-year__projects__items"
+        >
           {projectsForYear.map((project, index) => (
             <CardProject
               key={index}

@@ -43,7 +43,7 @@ export default function ThreadOfLife() {
 
   return (
     <div ref={targetRef} className="thread-of-life">
-      <div className="thread-of-life__slider">
+      <div aria-live="polite" className="thread-of-life__slider">
         <motion.div
           ref={contentRef}
           style={{ x }}

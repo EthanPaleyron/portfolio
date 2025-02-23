@@ -50,7 +50,7 @@ export default function Item({ children, image }) {
   return (
     <li ref={itemRef} className="interests__content__item">
       <h3>{children}</h3>
-      <img src={`/assets/interests/${image}`} alt={children} />
+      <img src={`/assets/interests/${image}`} alt={`Image pour ${children}`} />
     </li>
   );
 }
