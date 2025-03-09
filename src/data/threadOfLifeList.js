@@ -33,7 +33,11 @@ export const threadOfLifeList = [
     firstDate: "2024-09-09",
     lastDate: "2025-09-09",
     description: [
-      "Lorem ipsum dolor sit amet. A dolorum eveniet sit repellat placeat eos saepe enim non beatae voluptas. Et velit ipsa non magnam voluptatem et blanditiis deleniti aut dolores sequi.",
+      "Après avoir acquis des compétences solides en développement web à l'EDEN School, j'ai rejoint LesBonsTech pour mettre en pratique mes connaissances dans un environnement professionnel dynamique.",
+
+      "À l'école, j'ai approfondi mes compétences en JavaScript avancé, React, Symfony, et d'autres technologies. Chez LesBonsTech, j'ai travaillé sur divers projets web, notamment des sites WordPress sous des thèmes personnalisés pour des sites vitrines et e-commerce, en utilisant SCSS et des plugins comme ACF et WooCommerce.",
+
+      "L'expérience que je retire de cette période est l'importance de prendre des notes détaillées pour suivre les projets et documenter les solutions techniques.",
     ],
   },
 ];
