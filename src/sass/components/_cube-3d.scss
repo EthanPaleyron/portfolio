@@ -29,6 +29,7 @@
     transform: rotateX(0deg) rotateY(0deg);
     height: var(--cube-size);
     width: var(--cube-size);
+    cursor: pointer;
 
     div {
       position: absolute;
