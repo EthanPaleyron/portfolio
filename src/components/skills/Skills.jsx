@@ -22,7 +22,7 @@ export default function Skills() {
       icon: `${simpleicons}flutter`,
     },
     {
-      title: "Framer Motion",
+      title: "Motion",
       source: "https://www.framer.com/motion/",
       icon: `${simpleicons}framer`,
     },
@@ -100,7 +100,7 @@ export default function Skills() {
   ];
 
   const otherSkills = [
-    { title: "Anglais B2", source: "", icon: "" },
+    { title: "Anglais B1", source: "", icon: "" },
     {
       title: "Éco-conception",
       source: "",
