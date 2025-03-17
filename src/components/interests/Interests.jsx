@@ -9,7 +9,7 @@ export default function Interests() {
         <Item image={"escalade.webp"}>Escalade</Item>
         <Item image={"agay.webp"}>Plongée</Item>
         <Item image={"saut-en-parachute.webp"}>Sensations forte</Item>
-        <Item image={"revision.webp"}>Escape Game</Item>
+        <Item image={"fort-de-vancia.webp"}>Escape Game</Item>
         <Item image={"playlist-spotify.webp"}>Musique</Item>
         <Item image={"echecs-harry-potter.webp"}>Echecs</Item>
         <Item image={"dev.webp"}>Programmation</Item>
@@ -18,9 +18,9 @@ export default function Interests() {
         <Item image={"developpement-personnel.webp"}>
           Développement personnel
         </Item>
-        <Item image={"revision.webp"}>Aventures</Item>
+        <Item image={"rando.webp"}>Aventures</Item>
         <Item image={"suede.webp"}>Astronomie</Item>
-        <Item image={"revision.webp"}>Parc d'attraction</Item>
+        <Item image={"ferrari-land.webp"}>Parc d'attraction</Item>
       </ul>
     </div>
   );

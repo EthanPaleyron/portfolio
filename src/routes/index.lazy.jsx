@@ -37,7 +37,7 @@ function Index() {
         <h2>Mes projets</h2>
         <div className="my-projects__container">
           <MyProjects></MyProjects>
-          <div className="ship-platform">Animation de la ship platform</div>
+          <div className="ship-platform"></div>
         </div>
         <Link to={"/projects/"} className="btn-gold">
           Voir plus de projets

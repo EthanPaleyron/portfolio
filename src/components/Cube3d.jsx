@@ -9,28 +9,26 @@ export default function Cube3d() {
   const y = useMotionValue(-500);
   const [animationComplete, setAnimationComplete] = useState(false);
 
-  function startAnimation(timeout) {
-    setTimeout(() => {
-      animate(x, 0, {
-        duration: 1.25,
-        ease: "easeOut",
-      });
-      animate(y, 0, {
-        duration: 1.15,
-        ease: "easeOut",
-      });
+  function startAnimation() {
+    animate(x, 0, {
+      duration: 1.25,
+      ease: "easeOut",
+    });
+    animate(y, 0, {
+      duration: 1.15,
+      ease: "easeOut",
+    });
 
-      animate(rotateZ, 2 * 90 + 10, {
-        duration: 1.25,
-        ease: "easeOut",
-        onComplete: () => {
-          setAnimationComplete(true);
-        },
-      });
-    }, timeout);
+    animate(rotateZ, 2 * 90 + 10, {
+      duration: 1.25,
+      ease: "easeOut",
+      onComplete: () => {
+        setAnimationComplete(true);
+      },
+    });
   }
   useEffect(() => {
-    startAnimation(100);
+    startAnimation();
 
     rotateY.set(-30);
     rotateX.set(-15);
