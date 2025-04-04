@@ -33,7 +33,7 @@ export default function Nav() {
     <>
       <nav className="nav container">
         <Link to="/">
-          <img src="/icon.svg" alt="Icon" />
+          <img src="/logo.svg" alt="Icon" />
         </Link>
         <button
           title="Menu Burger"
@@ -83,7 +83,7 @@ export default function Nav() {
               </Link>
             </li>
           </ul>
-          <img src="/assets/cube-3d.png" alt="Cube" />
+          {/* <img src="/assets/cube-3d.png" alt="Cube" /> */}
         </div>
       </aside>
     </>

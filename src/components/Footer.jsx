@@ -8,7 +8,7 @@ export default function Footer() {
         <h2 className="footer__content__title">Me contacter ou me suivre</h2>
         <div className="footer__content__email">
           <Email></Email>
-          <img src="/assets/cube-3d.png" alt="Spider" />
+          {/* <img src="/assets/cube-3d.png" alt="Spider" /> */}
         </div>
         <div className="footer__content__bottom">
           <SocialMedia></SocialMedia>
