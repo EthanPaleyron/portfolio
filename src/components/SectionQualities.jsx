@@ -1,12 +1,7 @@
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { useRef } from "react";
-import { useLenis } from "lenis/react";
 
 export default function SectionQualities({ children, srcVideo }) {
-  // const lenis = useLenis(({ scroll }) => {
-  //   console.log(scroll);
-  // });
-
   const videoContainerRef = useRef(null);
   const videoRef = useRef(null);
 
