@@ -18,6 +18,7 @@ import { Route as ProjectSlugImport } from './routes/project/$slug'
 // Create Virtual Routes
 
 const ProjectsLazyImport = createFileRoute('/projects')()
+const HealthcheckLazyImport = createFileRoute('/healthcheck')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
@@ -27,6 +28,12 @@ const ProjectsLazyRoute = ProjectsLazyImport.update({
   path: '/projects',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/projects.lazy').then((d) => d.Route))
+
+const HealthcheckLazyRoute = HealthcheckLazyImport.update({
+  id: '/healthcheck',
+  path: '/healthcheck',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/healthcheck.lazy').then((d) => d.Route))
 
 const IndexLazyRoute = IndexLazyImport.update({
   id: '/',
@@ -51,6 +58,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
+    '/healthcheck': {
+      id: '/healthcheck'
+      path: '/healthcheck'
+      fullPath: '/healthcheck'
+      preLoaderRoute: typeof HealthcheckLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/projects': {
       id: '/projects'
       path: '/projects'
@@ -72,12 +86,14 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
+  '/healthcheck': typeof HealthcheckLazyRoute
   '/projects': typeof ProjectsLazyRoute
   '/project/$slug': typeof ProjectSlugRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
+  '/healthcheck': typeof HealthcheckLazyRoute
   '/projects': typeof ProjectsLazyRoute
   '/project/$slug': typeof ProjectSlugRoute
 }
@@ -85,27 +101,30 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexLazyRoute
+  '/healthcheck': typeof HealthcheckLazyRoute
   '/projects': typeof ProjectsLazyRoute
   '/project/$slug': typeof ProjectSlugRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects' | '/project/$slug'
+  fullPaths: '/' | '/healthcheck' | '/projects' | '/project/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects' | '/project/$slug'
-  id: '__root__' | '/' | '/projects' | '/project/$slug'
+  to: '/' | '/healthcheck' | '/projects' | '/project/$slug'
+  id: '__root__' | '/' | '/healthcheck' | '/projects' | '/project/$slug'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
+  HealthcheckLazyRoute: typeof HealthcheckLazyRoute
   ProjectsLazyRoute: typeof ProjectsLazyRoute
   ProjectSlugRoute: typeof ProjectSlugRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
+  HealthcheckLazyRoute: HealthcheckLazyRoute,
   ProjectsLazyRoute: ProjectsLazyRoute,
   ProjectSlugRoute: ProjectSlugRoute,
 }
@@ -121,12 +140,16 @@ export const routeTree = rootRoute
       "filePath": "__root.jsx",
       "children": [
         "/",
+        "/healthcheck",
         "/projects",
         "/project/$slug"
       ]
     },
     "/": {
       "filePath": "index.lazy.jsx"
+    },
+    "/healthcheck": {
+      "filePath": "healthcheck.lazy.jsx"
     },
     "/projects": {
       "filePath": "projects.lazy.jsx"
