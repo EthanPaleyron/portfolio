@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Email() {
-  const mail = "ethan.paleyron@proton.me";
+  const mail = "paleyron.ethan@proton.me";
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {

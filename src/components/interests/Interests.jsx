@@ -18,7 +18,7 @@ export default function Interests() {
         <Item image={"developpement-personnel.webp"}>
           Développement personnel
         </Item>
-        <Item image={"rando.webp"}>Aventures</Item>
+        <Item image={"quad.webp"}>Aventures</Item>
         <Item image={"suede.webp"}>Astronomie</Item>
         <Item image={"ferrari-land.webp"}>Parc d'attraction</Item>
       </ul>

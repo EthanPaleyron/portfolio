@@ -10,7 +10,7 @@ export default function SocialMedia() {
     },
     {
       title: "Instagram",
-      link: "https://www.instagram.com/ethanp._05/",
+      link: "https://www.instagram.com/ethanp005/",
     },
   ];
   return (

@@ -25,10 +25,14 @@ function Index() {
               Paleyron
             </h1>
             <p>
-              J&apos;ai <Age birthday={`2005-11-29`} /> ans et je me suis lancé
-              dans l&apos;informatique en tant que développeur web fullstack
-              alternance au sein de l&apos;établissement EDEN SCHOOL, basé près
-              de Lyon.
+              Hello moi c&apos;est Ethan, J&apos;ai{" "}
+              <Age birthday={`2005-11-29`} /> ans, je suis basé près de Lyon.{" "}
+              <br />
+              Je suis quelqu&apos;un qui adore bouger, voyager, découvrir de
+              nouvelles choses et faire du sport.
+              <br />
+              Passionné par le développement web principalement basé sur le
+              Front et j&apos;aime aussi a coté de ça construit des maquettes !
             </p>
           </div>
         </div>

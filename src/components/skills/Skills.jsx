@@ -7,7 +7,7 @@ export default function Skills() {
     {
       title: "CSS",
       source: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      icon: `${simpleicons}css3`,
+      icon: `${simpleicons}css`,
     },
     { title: "Dart", source: "https://dart.dev/", icon: `${simpleicons}dart` },
     {

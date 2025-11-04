@@ -1,6 +1,7 @@
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { useRef } from "react";
 
+// eslint-disable-next-line react/prop-types
 export default function SectionQualities({ children, srcVideo }) {
   const videoContainerRef = useRef(null);
   const videoRef = useRef(null);

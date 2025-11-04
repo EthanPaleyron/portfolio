@@ -18,11 +18,11 @@ export const threadOfLifeList = [
     firstDate: "2022-09-15",
     lastDate: "2024-07-04",
     description: [
-      "Dès la 5ᵉ, j'ai découvert l'algorithmie en cours de technologie avec Code Combat, où j'excellais. Mon professeur m'a encouragé à poursuivre. Après une expérience en cuisine, j'ai choisi le développement web.",
+      "Dès la 5ᵉ, j'ai découvert les algos en cours de technologie avec Code Combat, où j'excellais. Mon professeur m'a encouragé à poursuivre. Après une expérience en cuisine, j'ai choisi le développement web.",
 
       "Première année : Approfondissement du HTML, CSS, JavaScript, et des outils comme Git, Sass, et Adonis, avec une forte orientation front-end et algorithmique.",
 
-      "Deuxième année : Focus sur le back-end avec PHP, SQL, et WordPress, tout en continuant l'algorithmie. Développement d'un projet fil rouge, un générateur de Kahoot, et évaluation finale récapitulant 1400 heures de codage.",
+      "Deuxième année : Focus sur le back-end avec PHP, SQL, et WordPress, tout en continuant l'algorithmie. Développement d'un projet fil rouge, un générateur de Kahoot, et évaluation finale récapitulant 1 400 heures de codage.",
 
       "En parallèle, cours académiques (anglais, français, histoire-géo, mathématiques, gestion de projet) et séances de Communication Non Violente (CNV), avec des interventions variées sur des sujets enrichissants.",
     ],
