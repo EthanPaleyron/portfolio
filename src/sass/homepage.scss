@@ -16,8 +16,8 @@ main.homepage {
     }
 
     @include mobile {
-      height: 50rem;
-      padding-top: 8rem;
+      height: 56rem;
+      padding-top: 7rem;
     }
 
     &::before {
@@ -64,9 +64,6 @@ main.homepage {
 
       @include tablet {
         height: 56rem;
-      }
-      @include mobile {
-        height: 50rem;
       }
     }
 
