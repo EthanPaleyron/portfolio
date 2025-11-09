@@ -6,6 +6,7 @@ import NotFound from "./components/not-found/NotFound";
 // Create a new router instance
 const router = createRouter({
   routeTree,
+  basepath: "/",
   defaultNotFoundComponent: () => {
     return <NotFound />;
   },

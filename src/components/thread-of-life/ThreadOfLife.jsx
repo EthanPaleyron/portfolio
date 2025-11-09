@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll, useSpring } from "motion/react";
+import { motion, useTransform, useScroll } from "motion/react";
 import { useState, useEffect, useRef } from "react";
 import { threadOfLifeList } from "../../data/threadOfLifeList.js";
 import CardThreadOfLife from "./CardThreadOfLife.jsx";
@@ -12,29 +12,47 @@ export default function ThreadOfLife() {
   const contentRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  async function fetchData() {
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    setThreadOfLife(threadOfLifeList);
-    setLoader(false);
-  }
-
+  // Chargement des données
   useEffect(() => {
-    fetchData();
+    let isMounted = true;
+
+    const loadThreadOfLife = async () => {
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 0));
+        
+        if (isMounted) {
+          setThreadOfLife(threadOfLifeList);
+          setLoader(false);
+        }
+      } catch (error) {
+        console.error("Erreur lors du chargement du fil de vie:", error);
+        if (isMounted) {
+          setLoader(false);
+        }
+      }
+    };
+
+    loadThreadOfLife();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
+  // Gestion du redimensionnement de la fenêtre
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const { scrollYProgress } = useScroll({ target: targetRef });
-
   const x = useTransform(
     scrollYProgress,
     [0, 1],
@@ -54,7 +72,7 @@ export default function ThreadOfLife() {
             <div>Chargement du fil de vie...</div>
           ) : (
             threadOfLife.map((card, index) => (
-              <React.Fragment key={index}>
+              <React.Fragment key={card.name || index}>
                 <CardThreadOfLife
                   image={card.image}
                   firstDate={card.firstDate}

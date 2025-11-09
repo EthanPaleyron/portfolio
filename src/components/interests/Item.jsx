@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import PropTypes from 'prop-types';
 
-export default function Item({ children, image }) {
+const Item = ({ children, image }) => {
   const itemRef = useRef(null);
   const observerRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -54,3 +55,10 @@ export default function Item({ children, image }) {
     </li>
   );
 }
+
+Item.propTypes = {
+  children: PropTypes.node.isRequired,
+  image: PropTypes.string.isRequired,
+}
+
+export default Item;

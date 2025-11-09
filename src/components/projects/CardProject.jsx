@@ -1,12 +1,13 @@
 import { Link } from "@tanstack/react-router";
+import PropTypes from 'prop-types';
 import Tag from "./Tag";
 
-export default function CardProject({
+const CardProject = ({
   children = "Nom du projet",
   skills = ["skill"],
   image = "cca-rillieux-vancia.png",
   to = "/",
-}) {
+}) => {
   const toSlug = (name) =>
     name
       .normalize("NFD")
@@ -29,3 +30,12 @@ export default function CardProject({
     </article>
   );
 }
+
+CardProject.propTypes = {
+  children: PropTypes.string,
+  skills: PropTypes.arrayOf(PropTypes.string),
+  image: PropTypes.string,
+  to: PropTypes.string,
+}
+
+export default CardProject;

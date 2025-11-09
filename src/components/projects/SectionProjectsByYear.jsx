@@ -1,8 +1,9 @@
 import { useRef } from "react";
+import PropTypes from 'prop-types';
 import CardProject from "./CardProject.jsx";
 import { projectsList } from "../../data/projectsList";
 
-export default function SectionProjectsByYear({ children }) {
+const SectionProjectsByYear = ({ children }) => {
   const carouselRef = useRef(null);
 
   const scrollCarousel = (direction) => {
@@ -61,3 +62,9 @@ export default function SectionProjectsByYear({ children }) {
     </section>
   );
 }
+
+SectionProjectsByYear.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+export default SectionProjectsByYear;

@@ -1,12 +1,13 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
-export default function CardThreadOfLife({
+const CardThreadOfLife = ({
   image,
   children,
   firstDate,
   lastDate,
   description,
-}) {
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const formatDate = (dateString) => {
@@ -41,3 +42,13 @@ export default function CardThreadOfLife({
     </article>
   );
 }
+
+CardThreadOfLife.propTypes = {
+  image: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+  firstDate: PropTypes.string.isRequired,
+  lastDate: PropTypes.string.isRequired,
+  description: PropTypes.arrayOf(PropTypes.string).isRequired,
+}
+
+export default CardThreadOfLife;

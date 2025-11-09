@@ -1,4 +1,6 @@
-export default function Skill({ children, source, icon }) {
+import PropTypes from 'prop-types';
+
+const Skill = ({ children, source, icon }) => {
   const isClickable = Boolean(source);
 
   const content = (
@@ -22,3 +24,11 @@ export default function Skill({ children, source, icon }) {
     </p>
   );
 }
+
+Skill.propTypes = {
+  children: PropTypes.string.isRequired,
+  source: PropTypes.string,
+  icon: PropTypes.string,
+}
+
+export default Skill;

@@ -6,21 +6,39 @@ export default function MyProjects() {
   const [projects, setProjects] = useState([]);
   const [loader, setLoader] = useState(true);
 
-  async function fetchData() {
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    const filteredProjects = projectsList.filter(
-      (project) => project.toMyProjects !== null
-    );
-
-    const sortedProjects = filteredProjects.sort(
-      (a, b) => a.toMyProjects - b.toMyProjects
-    );
-    setProjects(sortedProjects);
-    setLoader(false);
-  }
-
   useEffect(() => {
-    fetchData();
+    let isMounted = true;
+
+    const loadProjects = async () => {
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 0));
+        
+        const filteredProjects = projectsList.filter(
+          (project) => project.toMyProjects !== null
+        );
+        
+        const sortedProjects = filteredProjects.sort(
+          (a, b) => a.toMyProjects - b.toMyProjects
+        );
+
+        if (isMounted) {
+          setProjects(sortedProjects);
+          setLoader(false);
+        }
+      } catch (error) {
+        console.error("Erreur lors du chargement des projets:", error);
+        if (isMounted) {
+          setLoader(false);
+        }
+      }
+    };
+
+    loadProjects();
+
+    // Cleanup function
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -28,9 +46,9 @@ export default function MyProjects() {
       {loader ? (
         <div>Chargement des projets...</div>
       ) : (
-        projects.map((project, index) => (
+        projects.map((project) => (
           <CardProject
-            key={index}
+            key={project.name}
             skills={project.skills}
             image={project.image}
             to={project.name}

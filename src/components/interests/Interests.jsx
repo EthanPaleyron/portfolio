@@ -20,7 +20,7 @@ export default function Interests() {
         </Item>
         <Item image={"quad.webp"}>Aventures</Item>
         <Item image={"suede.webp"}>Astronomie</Item>
-        <Item image={"ferrari-land.webp"}>Parc d'attraction</Item>
+        <Item image={"ferrari-land.webp"}>Parc d&apos;attraction</Item>
       </ul>
     </div>
   );

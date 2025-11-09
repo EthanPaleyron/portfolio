@@ -67,7 +67,7 @@ export default function Nav() {
                   <Link to="/#thread-of-life">Fil de vie pro</Link>
                 </li>
                 <li>
-                  <Link to="/#interests">Centres d'interêt</Link>
+                  <Link to="/#interests">Centres d&apos;interêt</Link>
                 </li>
                 <li>
                   <Link to="/#skills">Compétences</Link>

@@ -5,9 +5,9 @@ export default function ProjectNotFound() {
   return (
     <section className="not-found container">
       <h1>404 - Projet Non Trouvée</h1>
-      <p>Désolé, le projet que vous recherchez n'existe pas.</p>
+      <p>Désolé, le projet que vous recherchez n&apos;existe pas.</p>
       <Link to="/" className="btn-purple">
-        Retourner à l'accueil
+        Retourner à l&apos;accueil
       </Link>
     </section>
   );

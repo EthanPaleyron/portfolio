@@ -48,7 +48,7 @@ export default function Cube3d() {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [animationComplete]);
+  });
 
   const handleClick = () => {
     setAnimationComplete(false);

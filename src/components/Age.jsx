@@ -1,4 +1,6 @@
-export default function Age({ birthday }) {
+import PropTypes from 'prop-types';
+
+const Age = ({ birthday }) => {
   const calculateAge = (birthday) => {
     const birthDate = new Date(birthday);
     const today = new Date();
@@ -15,3 +17,9 @@ export default function Age({ birthday }) {
 
   return <span>{calculateAge(birthday)}</span>;
 }
+
+Age.propTypes = {
+  birthday: PropTypes.string.isRequired,
+}
+
+export default Age;
