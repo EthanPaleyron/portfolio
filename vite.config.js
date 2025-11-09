@@ -9,5 +9,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+  },
+  preview: {
+    allowedHosts: ['localhost', 'portfolio.epaleyron.pro']
   }
 });
